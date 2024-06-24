@@ -1,0 +1,20 @@
+.direction__page {
+  .learn__section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6rem;
+    align-items: center;
+
+    .options__purpose {
+      display: flex;
+      flex-direction: column;
+      width: 23rem;
+      margin: auto;
+      button {
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

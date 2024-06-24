@@ -1,0 +1,44 @@
+.mb-60px {
+  margin-bottom: 60px;
+}
+
+.fs-24px {
+  font-size: 24px;
+}
+
+.robot {
+  top: -35%;
+  left: 30%;
+}
+
+.icon-close {
+  cursor: pointer;
+  color: #444444;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  font-size: 28px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+    0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    font-size: 24px;
+    color: #444444;
+    &:last-child {
+      margin-bottom: 20px !important;
+    }
+  }
+  .error {
+    color: #f52424;
+  }
+}
+
+.card-button {
+  width: 170px !important;
+  font-size: 28px !important;
+}

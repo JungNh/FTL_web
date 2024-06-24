@@ -1,0 +1,645 @@
+.train___game {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+
+  .btn__time {
+    position: absolute;
+    top: 1rem;
+    left: 5rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn__time {
+    left: 7.7rem;
+  }
+
+  .showTimer {
+    left: 350px !important;
+  }
+
+  .label_time {
+    position: absolute;
+    top: 1rem;
+    left: 14rem;
+    font-family: 'Mali';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 69px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .heart_ico {
+    position: absolute;
+    top: 25px;
+    left: 240px;
+    display: flex;
+  }
+
+  .game__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    animation-delay: 0s;
+    animation-duration: 10s;
+    animation-name: moveLeft;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1000);
+    animation-fill-mode: both;
+
+    .back__ground--1 {
+      height: 100%;
+      object-fit: contain;
+      transform: translateX(6px);
+    }
+    .back__ground--2 {
+      height: 100%;
+      object-fit: contain;
+      transform: rotateY(180deg) translateX(-4px);
+    }
+    .back__ground--3 {
+      height: 100%;
+      object-fit: contain;
+      transform: translateX(2px);
+    }
+    .back__ground--4 {
+      height: 100%;
+      object-fit: contain;
+      transform: rotateY(180deg);
+    }
+  }
+
+  @keyframes moveLeft {
+    0% {
+      right: 0;
+    }
+    100% {
+      transform: translateX(calc(50% - 10px));
+    }
+  }
+  .game-button {
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateY(3px) !important;
+    }
+  }
+  .game-train-train {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 35%;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    z-index: 100;
+  }
+
+  .game-train-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 30%;
+  }
+  .font-text {
+    font-family: 'Mali', cursive;
+    font-size: 60px;
+    color: white;
+    line-height: 75.4px;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    right: 300px;
+    @media screen and (max-width: 1300px) {
+      right: 250px;
+      font-size: 40px;
+    }
+  }
+  .game-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .game-answer-train {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .game-answer-train-inside {
+      width: 30%;
+      .game-answer-container {
+        position: relative;
+        text-align: center;
+        .number-in-answer {
+          position: absolute;
+          width: 200px;
+          height: 130px;
+          object-fit: contain;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  .container-game {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    &.blur {
+      backdrop-filter: blur(8px);
+    }
+  }
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .start-button {
+    position: absolute;
+    top: 75%;
+    left: calc(50% - 200px);
+    z-index: 100;
+    cursor: pointer;
+    animation: 2s shake infinite;
+    .btn__play--text {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 64px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .chat-game {
+    position: absolute;
+    top: 70%;
+    margin-left: 50px;
+  }
+  .container-chat-game {
+    width: 100%;
+  }
+  .chat-text-game {
+    position: absolute;
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  .left-chat-game {
+    position: relative;
+    width: 400px;
+  }
+  .sound-game-train {
+    position: absolute;
+    bottom: 5%;
+    left: 50px;
+  }
+
+  .ico__smoke {
+    position: absolute;
+    width: 30px;
+    left: 30px;
+    opacity: 0;
+    .ico__smoke--image {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .train-container {
+    position: absolute;
+    bottom: 16%;
+    display: flex;
+    width: 90%;
+    left: 100vw;
+    transition: left 3s ease;
+    &.disapear {
+      opacity: 0;
+    }
+    &.start__game {
+      left: 50px;
+    }
+    .train-result {
+      position: relative;
+      width: 8%;
+      margin-right: 5px;
+      .train-contain {
+        position: absolute;
+        bottom: 28%;
+        left: 0px;
+        width: 100%;
+        @media screen and (max-width: 1300px) {
+          bottom: 18%;
+        }
+      }
+      .train-wheel {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+      }
+      .train-number {
+        position: absolute;
+        bottom: 30%;
+        height: 42px;
+        left: 0px;
+        width: 100%;
+        object-fit: contain;
+        padding: 0 1rem;
+        @media screen and (max-width: 1300px) {
+          bottom: 19%;
+        }
+      }
+    }
+  }
+  .correct-answer {
+    margin-left: 50px;
+    margin-top: -100px;
+  }
+
+  .incorrect-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000065;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+  }
+  .icon-incorrect-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .answer-animation {
+    transition: all 0.2s ease-in-out;
+  }
+  .answer-animation:hover {
+    transform: scale(1.2);
+    z-index: 1;
+  }
+
+  .container-correct-game-train {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    .result-game {
+      position: relative;
+      width: 100%;
+
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 40px;
+        color: white;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .result-image-game {
+        position: absolute;
+        height: 220px;
+        object-fit: contain;
+        width: 300px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 1300px) {
+      // left: 5%;
+      width: 500px;
+      .result-image-game {
+        height: 180px !important;
+        width: 250px !important;
+      }
+    }
+  }
+
+  .sound-result-game {
+    position: absolute;
+    top: calc(50% + 120px);
+    left: calc(30% - 350px);
+    @media screen and (max-width: 1300px) {
+      top: calc(50% + 100px);
+      left: calc(30% - 285px);
+    }
+  }
+  .container-point-game-train {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translate(50%, -50%);
+    .result-game {
+      position: relative;
+      width: 400px;
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        .text-exp {
+          font-size: 50px;
+        }
+      }
+    }
+    .continue-game {
+      position: relative;
+      width: 170px;
+      margin: auto;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .result-game {
+        width: 100%;
+        width: 160px;
+      }
+      .btn__continue--text {
+        position: absolute;
+        bottom: 0%;
+        z-index: 1;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      .continue-game {
+        width: 100%;
+        margin-top: 0px;
+      }
+    }
+    @media screen and (max-width: 1300px) {
+      right: 25%;
+    }
+  }
+
+  .summary-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 8vh;
+    z-index: 1;
+  }
+
+  .table-summary-train {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15%;
+    width: 100%;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+
+    .results__container {
+      position: absolute;
+      overflow: scroll;
+      width: 90%;
+      height: 77vh;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        180deg,
+        rgba(134, 184, 223, 0.2) 0%,
+        rgba(10, 102, 175, 0.2) 100%
+      );
+      border: 8px solid #103a61;
+      box-sizing: border-box;
+      border-radius: 40px;
+      display: grid;
+      // padding: 1rem;
+      grid-template-areas:
+        '1fr 1fr 1fr 1fr 1fr'
+        '1fr 1fr 1fr 1fr 1fr';
+      align-items: center;
+      row-gap: 1rem;
+      padding: 3rem 2rem;
+      .box-summary-train {
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        transition: 0.5s transform ease;
+        width: 200px;
+        @media screen and (max-width: 1300px) {
+          width: 150px;
+        }
+        .box__border {
+          object-fit: contain;
+          width: 100%;
+        }
+        &.popup {
+          transform: scale(1.1);
+        }
+
+        .text-box-summary {
+          position: absolute;
+          font-family: 'Mali', cursive;
+          font-size: 24px;
+          color: white;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          text-align: center;
+          padding: 2rem;
+          .image-box-summary {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 170px;
+            height: 150px;
+            position: absolute;
+            object-fit: contain;
+            @media screen and (max-width: 1300px) {
+              width: 120px;
+              height: 100px;
+            }
+          }
+          p {
+            position: absolute;
+            top: calc(5% + 155px);
+            left: 2.5%;
+            width: 95%;
+            font-family: 'Mali', cursive;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+
+            @media screen and (max-width: 1300px) {
+              top: calc(5% + 105px);
+              font-size: 16px;
+            }
+          }
+        }
+
+        .correct__box {
+          width: 200px;
+        }
+      }
+    }
+    .box-finish-summary-train {
+      position: relative;
+      .box__end {
+        width: 100px;
+        @media screen and (max-width: 1300px) {
+          width: 80px;
+        }
+      }
+      .box-finish-summary-action {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        @media screen and (max-width: 1300px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  .again-game {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    width: 170px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .result-game {
+      width: 160px;
+    }
+    .btn__continue--text {
+      position: absolute;
+      bottom: 2%;
+      z-index: 1;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+    .continue-game {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+  .container-again {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    .again-container-text {
+      position: relative;
+
+      width: 400px;
+      margin: auto;
+      margin-top: 20px;
+      .again-text {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  .user-drag--none {
+    -webkit-user-drag: none;
+  }
+  .user-select--none {
+    user-select: none;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg) scale(1);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg) scale(1);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg) scale(1);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg) scale(1.1);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg) scale(1.1);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg) scale(1.1);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg) scale(1.1);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg) scale(1);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg) scale(1);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg) scale(1);
+    }
+  }
+}

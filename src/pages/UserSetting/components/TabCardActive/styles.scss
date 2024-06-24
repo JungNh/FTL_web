@@ -1,0 +1,75 @@
+.tab_card_active {
+  padding: 4rem 1rem 4rem 1.5rem;
+  min-height: 100vh;
+  color: white;
+  // background-image: url('../../../../assets/images/colorfulBackground.jpeg');
+  background-size: cover;
+  .btn__prev,
+  .btn__next {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #eeeeee;
+    padding: 0;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+  .input__active__card {
+    width: 590px;
+    @media screen and (max-width:800px) {
+      width: 80%;
+    }
+  }
+  .card__wrapper {
+    padding-right: 1.5rem;
+    width: 22.375rem;
+  }
+  .title {
+    text-shadow: 0px 0px 5px #7d8186;
+  }
+  .card__item {
+    user-select: none;
+    cursor: pointer;
+    background: linear-gradient(112.64deg, #ffffffe6 0%, #3043668a 100%);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid white;
+
+    .card__item__top {
+      padding: 2rem 1rem;
+      .card__item--name {
+        color: #0066ff;
+        font-size: 0.75rem;
+      }
+      .card__item--time {
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-align: right;
+      }
+    }
+    .card__item__bottom {
+      padding: 1rem;
+      &.blue {
+        background: linear-gradient(90deg, #0066ff 0%, #2e81ff 100%);
+      }
+      &.gold {
+        background: linear-gradient(90deg, #ffb800 0%, #ff7a00 100%);
+      }
+    }
+  }
+
+  .item__outDate {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    color: #bdbdbd;
+    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    &:hover {
+      box-shadow: 0px 4px 12px 1px #7d8186;
+    }
+  }
+}

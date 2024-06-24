@@ -1,0 +1,255 @@
+.achive_detail_title {
+    color: #FF0000;
+    margin-bottom: 25px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.13px;
+}
+
+.achievenment_detail__wrap {
+    padding: 1rem;
+    background: #eeeeee;
+    border-radius: 0.75rem;
+}
+
+.achive_detail__item {
+    background-color: #FFFFFF;
+    margin-top: 30px;
+    border-radius: 0.75rem;
+    box-shadow: 1px 5px 1px #716363;
+    height: 140px;
+    position: relative;
+    margin-bottom: 30px;
+    .item_img_wrap  {
+        position: absolute;
+        left: 12%;
+        img {
+            width: 88px;
+            -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(5px 5px 5px #222);
+        }
+    }
+}
+
+.achive_detail_item_ct {
+    position: absolute;
+    top: 33%;
+    right: 30%;
+
+    .achive_detail_item__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        // font-size: 16px;
+        line-height: 19px;
+    }
+    
+    .achive_detail_item__desc {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-weight: 700;
+        color: #FF0000;
+        margin-top: 15px;
+    }
+}
+
+.popup_wrap {
+    position: relative;
+    .img_cn {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.popup__course_name_wrap {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 41%;
+
+    .popup__course_name {
+        color: #0052A3;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 18.75px;
+        font-family: 'Roboto', sans-serif;
+    }
+   
+}
+
+.popup__user_name_wrap {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 328px;
+
+    .popup__user_name {
+        color: #0052A3;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 18.75px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+}
+
+.popup__rank {
+    position: absolute;
+    color: #0052A3;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 18.75px;
+    top: 393px;
+    left: 480px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.popup__month {
+    position: absolute;
+    bottom: 303px;
+    right: 185px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.popup__date {
+    position: absolute;
+    bottom: 303px;
+    right: 236px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.popup__year {
+    position: absolute;
+    bottom: 303px;
+    right: 123px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.popup_btn {
+    width: 255px;
+    display: inline-block;
+    position: relative;
+    height: 64px;
+    background-color: #E0E0E0;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.75rem;
+    left: 38%;
+    margin-top: 20px;
+    box-shadow: 2px 2px 1px #4f484a;
+    &:hover {
+        color: #212529;
+        background-color: #E0E0E0;
+        border-color: #E0E0E0;
+    }
+}
+
+.icon_down {
+    position: absolute;
+    left: 16%;
+    width: 40px;
+    height: 35px;
+    top: 23%;
+}
+
+.txt_down {
+    position: absolute;
+    left: 45%;
+    bottom: 6%;
+    color: #010101;
+    font-weight: 700;
+}
+
+.popupCc {
+    .modal-content {
+        background-color: unset !important;
+        border: unset !important;
+    }
+}
+
+.popupCc {
+    width: 1072px !important;
+    max-width: none;
+}
+
+@media (min-width: 1024px) {
+    .popupCc {
+        width: 1072px !important;
+        max-width: none;
+    }
+}
+
+.popupNotSuccess {
+    background: #fff;
+    top: 28%;
+    width: 30% !important;
+    border-radius: 0.75rem;
+    .popupInfoText {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+#content_popup_wrap{
+    width: 1000px;
+    height: 710px;
+    .bg_img {
+        width: 1000px;
+        height: 710px;
+        background-image: url('./achievement.png');
+        background-repeat: no-repeat;
+        background-size: 1000px;
+        margin: 0;
+      }
+  
+      p {
+        text-align: center;
+        font-family: 'Sen', sans-serif;
+        color: #395185;
+        line-height: 24px;
+      }
+  
+      .info {
+        padding-top: 30%;
+        /* position: absolute; */
+        /* transform: rotate(90deg); */
+      }
+  
+      .date {
+        position: absolute;
+        text-align: end;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        left: 700px;
+        top:540px;
+        width: 200px;
+      }
+  
+      .name{
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+      .rank{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .text{
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .course{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .rank_bg {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        margin-top: -5px;
+        margin-bottom: -5px;
+      }
+}

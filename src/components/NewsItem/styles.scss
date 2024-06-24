@@ -1,0 +1,35 @@
+.news__item {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 2px 4px #000000bb;
+  }
+  // width: 100%;
+  .news__images {
+    img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+
+  .news__text {
+    background-color: #f8f7f7;
+    padding: 1rem;
+    font-size: 14px;
+    .news__time {
+      color: #8e8e93;
+      margin-right: 8px;
+    }
+    .news__category {
+      color: #00a014;
+      font-weight: bold;
+    }
+    .news__title {
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+  }
+}

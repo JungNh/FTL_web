@@ -1,0 +1,298 @@
+.questiondisplay__component {
+  padding: 0.625rem 1.5625rem;
+  border: 1px solid #e5e5ea;
+  width: 100%;
+  video {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .component__topic {
+    margin-bottom: 3.125rem;
+    p {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #0066ff;
+    }
+    div {
+      height: 15rem;
+      overflow-y: auto;
+      padding-right: 1.25rem;
+    }
+  }
+  .component__image {
+    margin: 0 auto;
+    margin-bottom: 3.125rem;
+    margin-top: 1.25rem;
+    height: 100%;
+    object-fit: contain;
+    // width: 40rem;
+    // background: #eeeeee;
+    // border: 1px solid #eeeeee;
+    border-radius: 12px;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      height: 300px;
+      width: 100%;
+    }
+  }
+  .component__video {
+    margin: 0 auto;
+    margin-bottom: 3.125rem;
+    margin-top: 1.25rem;
+  }
+  .component__listen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    p {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #0066ff;
+      text-align: center;
+    }
+    .listen__audio {
+      width: 80%;
+    }
+  }
+  .component__header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #0066ff;
+    margin-bottom: 1rem;
+  }
+  .component__question {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .component__answer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.9375rem;
+  }
+  .component__answer > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .component__answer__label {
+      display: flex;
+      justify-content: flex-start;
+      // align-items: center;
+      gap: 1rem;
+      flex: 0 1;
+      width: 100%;
+      cursor: pointer;
+      input {
+        flex-shrink: 0;
+        width: 1.7rem;
+        border: 3px solid gray;
+        height: 1.7rem;
+        margin: 0;
+        padding: 0;
+      }
+      label {
+        display: flex;
+        width: 100%;
+      }
+      .form-check-input:checked {
+        background-color: #04bc8a;
+        border-color: #04bc8a;
+      }
+    }
+    .component__answer__misc {
+      margin-left: 2rem;
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .component__answer__media {
+      width: 120%;
+      margin: 0.625rem 0;
+      display: flex;
+      video: {
+        width: 20rem;
+        height: 15rem;
+        border: 1px solid #eeeeee;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .component__answer__media-audio {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .component__answer__media-image {
+        display: flex;
+        justify-content: center;
+        margin-left: 40px;
+        height: 10%;
+        width: 25rem;
+
+        // width: 30rem;
+        // background: #eeeeee;
+        // border: 2px solid black;
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+          object-fit: contain;
+          // height: 15rem;
+          width: 100%;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+  .component__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0.9375rem 0;
+    button {
+      padding: 0.625rem 2.5rem;
+      width: fit-content;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .component__buttons-prev {
+      background: #ffffff !important;
+      border: 1px solid #8e8e93;
+      color: #000000 !important;
+    }
+  }
+}
+
+// RESPONSIVE
+/* Media query cho màn hình có chiều rộng nhỏ hơn 768px (mobile) */
+@media (max-width: 768px) {
+  .component__answer {
+    .row-item-answers {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    .component__answer__media {
+      .component__answer__media-image {
+        img {
+          height: 5rem;
+        }
+      }
+    }
+  }
+}
+
+/* Media query cho màn hình có chiều rộng từ 769px đến 1024px (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .component__answer {
+    /* Tùy chỉnh các thuộc tính CSS tại đây cho màn hình tablet */
+    .row-item-answers {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+    .component__answer__media {
+      .component__answer__media-image {
+        img {
+          height: 10rem;
+        }
+      }
+    }
+  }
+}
+
+/* Media query cho màn hình có chiều rộng từ 1025px đến 1440px (laptops) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .component__answer {
+    .row-item-answers {
+      width: 350px;
+      margin-bottom: 20px;
+      .component__answer__media-image {
+        width: 25rem;
+        margin-left: 0px;
+      }
+    }
+    .component__answer__media {
+      .component__answer__media-image {
+        img {
+          height: 10rem;
+        }
+      }
+    }
+    /* Tùy chỉnh các thuộc tính CSS tại đây cho màn hình laptop */
+  }
+}
+
+/* Media query cho màn hình có chiều rộng từ 1441px trở lên (desktops) */
+@media (min-width: 1441px) and (max-width: 1782px) {
+  .component__answer {
+    .row-item-answers {
+      width: 450px;
+      margin-bottom: 20px;
+      .component__answer__media-image {
+        width: 25rem;
+        margin-left: 0px;
+      }
+      .component__answer__media {
+        .component__answer__media-image {
+          img {
+            height: 10rem;
+          }
+        }
+      }
+    }
+    /* Tùy chỉnh các thuộc tính CSS tại đây cho màn hình desktop */
+  }
+}
+@media (min-width: 1783px) and (max-width: 2023px) {
+  .component__answer {
+    .row-item-answers {
+      width: 500px;
+      margin-bottom: 20px;
+      .component__answer__media-image {
+        width: 25rem;
+        margin-left: 0px;
+      }
+      .component__answer__media {
+        .component__answer__media-image {
+          img {
+            height: 15rem;
+          }
+        }
+      }
+    }
+    /* Tùy chỉnh các thuộc tính CSS tại đây cho màn hình desktop */
+  }
+}
+@media (min-width: 2024px) {
+  .component__answer {
+    .row-item-answers {
+      width: 600px;
+      margin-bottom: 20px;
+      .component__answer__media-image {
+        width: 27rem;
+        margin-left: 0px;
+      }
+      .component__answer__media {
+        .component__answer__media-image {
+          img {
+            height: 15rem;
+          }
+        }
+      }
+    }
+    /* Tùy chỉnh các thuộc tính CSS tại đây cho màn hình desktop */
+  }
+}

@@ -1,0 +1,339 @@
+// .homePage {
+//    font-size: 40px !important;
+//    color    : black !important;
+//    width    : 70rem;
+//    margin   : auto;
+
+//    @media screen and (max-width: 1300px) {
+//       width: 60rem;
+//    }
+//  }
+
+.bannerHome {
+  position: relative;
+  margin-top: 3.5rem;
+
+  border-radius: 0.75rem;
+
+  .alice-carousel {
+    height: 15.625rem;
+    position: relative;
+    border-radius: 0.75rem;
+  }
+
+  .ico__prev,
+  .ico__next {
+    position: absolute;
+    top: 40%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .ico__prev {
+    left: 1rem;
+  }
+
+  .ico__next {
+    right: 1rem;
+  }
+
+  .item__baner {
+    position: relative;
+    height: 15.625rem;
+
+    > span {
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .image__baner {
+      position: relative;
+      width: 100%;
+      height: 15.625rem;
+      object-fit: cover;
+      border-radius: 0.75rem;
+    }
+  }
+
+  .alice-carousel__dots {
+    position: absolute;
+    bottom: 0%;
+    left: 47%;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .bg_course {
+    position: relative;
+    height: 15.625rem;
+   //  box-shadow: 0px 4px 12px #0000003d, 0px 0.3236px 4.81372px rgba(0, 0, 0, 0.221228),
+   //    0px 0.06879px 1.24973px rgba(0, 0, 0, 0.178429);
+   //  border-radius: 0.75rem;
+    object-fit: contain;
+   //  overflow: hidden;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+    &:hover {
+      // box-shadow: 8px 4px 8px 0px #380246;
+      transform: translate(-2px, -2px) scale(1.04);
+      // border: 1px solid #380246;
+    }
+  }
+}
+
+.list__course {
+  position: relative;
+  margin-bottom: 8rem;
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .list__first {
+    margin-top: 0.9375rem;
+    position: relative;
+
+    .tag__item {
+      height: 5rem;
+      width: fit-content;
+
+      @media screen and (max-width: 992px) {
+        margin-bottom: 2.5rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      > span {
+        width: 100%;
+      }
+
+      .tag__image {
+        height: 5rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.75rem;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.3236px 4.81372px rgba(0, 0, 0, 0.221228),
+          0px 0.06879px 1.24973px rgba(0, 0, 0, 0.178429);
+        transition: 0.3s all ease;
+
+        &:hover {
+          box-shadow: 8px 8px 8px #380246;
+          transform: translate(-8px, -8px) scale(1.04);
+          border: 1px solid #380246;
+        }
+      }
+
+      .tag__text {
+        font-size: 0.875rem;
+        color: #0066ff;
+        text-align: center;
+        margin-top: 0.4375rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .english__child {
+    margin-top: 1.5rem;
+    position: relative;
+
+    .title__child {
+      padding-top: 1.5rem;
+      font-size: 1.125rem;
+      color: #4f4f4f;
+      font-weight: 700;
+    }
+
+    .link__child {
+      padding-top: 1.5rem;
+      padding-right: 1.5rem;
+      font-size: 0.875rem;
+      color: #0066ff;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .item__course--wrapper {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 19rem;
+    width: 17rem;
+    margin-top: 1.3125rem;
+
+    @media screen and (max-width: 1300px) {
+      width: 15rem;
+    }
+
+    .item__course {
+      position: relative;
+      cursor: pointer;
+
+      .image__course {
+        position: relative;
+        height: 15rem;
+        box-shadow: 0px 4px 12px #0000003d, 0px 0.3236px 4.81372px rgba(0, 0, 0, 0.221228),
+          0px 0.06879px 1.24973px rgba(0, 0, 0, 0.178429);
+        border-radius: 0.75rem;
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 0.3rem;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        &:hover {
+          box-shadow: 8px 4px 8px 0px #380246;
+          transform: translate(-2px, -2px) scale(1.04);
+          border: 1px solid #380246;
+        }
+      }
+
+      .text__course {
+        position: relative;
+        font-size: 0.75rem;
+        text-align: center;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        color: #4f4f4f;
+      }
+
+      .flag__vip {
+        position: absolute;
+        width: 2rem;
+        height: 0.9375rem;
+        bottom: 0;
+        right: 0;
+        font-size: 0.5625rem;
+        text-align: center;
+        font-weight: 400;
+        border-bottom-right-radius: 0.75rem;
+        border-top-left-radius: 0.75rem;
+        padding-top: 0.1rem;
+      }
+
+      .flag__vip.VIP {
+        background-color: #f68c2d;
+        color: #ffffff;
+      }
+
+      .flag__vip.FREE {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .flag__vip.OPEN {
+        background-color: #0066ff;
+        color: #ffffff;
+      }
+    }
+
+    &.content__item {
+      width: 25rem !important;
+    }
+  }
+
+  .carousel__wrapper {
+    position: relative;
+    height: 17rem;
+
+    .btn__left {
+      position: absolute;
+      top: 7rem;
+      left: -4rem;
+      opacity: 1;
+      transition: 0.3s all ease;
+      cursor: pointer;
+
+      &.disabled {
+        left: 0;
+        opacity: 0;
+      }
+    }
+
+    .btn__right {
+      position: absolute;
+      top: 7rem;
+      right: -4rem;
+      opacity: 1;
+      cursor: pointer;
+      transition: 0.3s all ease;
+
+      &.disabled {
+        right: 0;
+        opacity: 0;
+      }
+    }
+
+    .btn__left__prev {
+      position: absolute;
+      top: 1rem;
+      left: -4rem;
+      opacity: 1;
+      transition: 0.3s all ease;
+      cursor: pointer;
+
+      &.disabled {
+        left: 0;
+        opacity: 0;
+      }
+    }
+
+    @media screen and (max-width: 1300px) {
+      .btn__left {
+        left: -1rem;
+      }
+
+      .btn__right {
+        right: -1rem;
+      }
+    }
+  }
+}
+
+.allCourses__page {
+  padding-top: 4rem;
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+    z-index: 1;
+  }
+}

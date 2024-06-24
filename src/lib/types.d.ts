@@ -1,0 +1,5 @@
+declare module 'react-html-parser'
+declare module '*.mp3'
+declare module 'rc-animate'
+declare module 'rc-table'
+declare module 'firebase'

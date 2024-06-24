@@ -1,0 +1,38 @@
+.tag__item {
+
+
+    @media screen and (max-width: 992px) {
+       margin-bottom: 2.5rem;
+    }
+
+    &:hover {
+       cursor: pointer;
+    }
+
+    >span {
+       width: 100%;
+    }
+
+    .tag__image {
+
+       object-fit   : cover;
+       border-radius: 0.75rem;
+       box-shadow   : 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.3236px 4.81372px rgba(0, 0, 0, 0.221228),
+          0px 0.06879px 1.24973px rgba(0, 0, 0, 0.178429);
+       transition: 0.3s all ease;
+
+       &:hover {
+          box-shadow: 8px 8px 8px #380246;
+          transform : translate(-8px, -8px) scale(1.04);
+          border    : 1px solid #380246;
+       }
+    }
+
+    .tag__text {
+       font-size  : 0.875rem;
+       color      : #0066ff;
+       text-align : center;
+       margin-top : 0.4375rem;
+       font-weight: 700;
+    }
+ }

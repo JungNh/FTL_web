@@ -1,0 +1,111 @@
+.max__screen--overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  position: relative;
+  @media screen and (max-width: 999px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .left__arrow,
+    .right__arrow {
+      display: block !important;
+    }
+  }
+  @media screen and (max-height: 599px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .top__arrow,
+    .bottom__arrow {
+      display: block !important;
+    }
+  }
+  .fubo__image {
+    width: 10rem;
+  }
+
+  .left__arrow,
+  .right__arrow,
+  .top__arrow,
+  .bottom__arrow {
+    display: none;
+    width: 2rem;
+    position: absolute;
+  }
+
+  .left__arrow {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    animation: 1s toLeft infinite ease;
+  }
+  .right__arrow {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%) rotate(180deg);
+    animation: 1s toRight infinite ease;
+  }
+  .top__arrow {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    animation: 1s toTop infinite ease;
+  }
+  .bottom__arrow {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%) rotate(270deg);
+    animation: 1s toBottom infinite ease;
+  }
+
+  @keyframes toLeft {
+    0% {
+      left: 10%;
+    }
+    50% {
+      left: 5%;
+    }
+    100% {
+      left: 10%;
+    }
+  }
+  @keyframes toRight {
+    0% {
+      right: 10%;
+    }
+    50% {
+      right: 5%;
+    }
+    100% {
+      right: 10%;
+    }
+  }
+  @keyframes toTop {
+    0% {
+      top: 10%;
+    }
+    50% {
+      top: 5%;
+    }
+    100% {
+      top: 10%;
+    }
+  }
+  @keyframes toBottom {
+    0% {
+      bottom: 10%;
+    }
+    50% {
+      bottom: 5%;
+    }
+    100% {
+      bottom: 10%;
+    }
+  }
+}

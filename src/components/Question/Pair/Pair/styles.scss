@@ -1,0 +1,108 @@
+.lession__pair {
+  .subTitle__lession {
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #4f4f4f;
+  }
+
+  .title__lession {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0066ff;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .part__item {
+    width: 332px;
+    height: 47px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .li__item {
+    list-style: none;
+    width: 470px;
+    height: 47px;
+
+    .part__item {
+      width: 100%;
+      height: 100%;
+      background-size: auto 100%;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 19px;
+        background-color: #e5e5ea;
+        height: 47px;
+        width: 430px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: 0;
+      }
+      &.active {
+        &::before {
+          background-color: #56a4ff;
+        }
+      }
+      &.correct {
+        &::before {
+          border-top: 1px solid #04bc8a;
+          border-right: 1px solid #04bc8a;
+          border-bottom: 1px solid #04bc8a;
+          box-sizing: border-box;
+        }
+      }
+      &.wrong {
+        &::before {
+          border-top: 1px solid #ff556d;
+          border-right: 1px solid #ff556d;
+          border-bottom: 1px solid #ff556d;
+          box-sizing: border-box;
+        }
+      }
+      .pair-text {
+        z-index: 1;
+      }
+    }
+  }
+
+  // .-enter{
+  //   opacity: 0;
+  // }
+  // .-exit{
+  //   opacity: 1;
+  // }
+  // .-enter-active{
+  //   opacity: 1;
+  // }
+  // .-exit-active{
+  //   opacity: 0;
+  // }
+  // .-enter-active,
+  // .-exit-active{
+  //   transition: opacity 500ms;
+  // }
+}

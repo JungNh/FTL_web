@@ -1,0 +1,191 @@
+.room__online__page {
+  @import './children/QuizRoom/styles.scss';
+  background: white;
+  height: 95vh;
+  max-width: 80rem;
+  color: black !important;
+  margin: auto;
+  @media screen and (max-width: 1300px) {
+    max-width: 60rem;
+  }
+  .button__back {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1;
+    border-radius: 0.75rem;
+    width: 2.5rem;
+  }
+  .table_future {
+    border: 1px solid #d1d1d6;
+    table {
+      width: 100%;
+      thead {
+        tr {
+          th {
+            border-bottom: 1px solid #d1d1d6;
+            padding: 0.5rem;
+          }
+        }
+      }
+      tr:not(:last-child) {
+        td {
+          border-bottom: 1px solid #d1d1d6;
+        }
+      }
+      td {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .room__online--title {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    color: #0066ff;
+  }
+  .select__class {
+    .select__control {
+      border-radius: 12px;
+      border: 1px solid #9c9ca1;
+    }
+  }
+  .create__room {
+    background: #fcb62f;
+    border: 1px solid #ffcc00;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .search__room {
+    border: 1px solid #9c9ca1 !important;
+    border-radius: 12px !important;
+    background: white !important;
+    height: 2.5rem !important;
+  }
+
+  .createRoom__page {
+    max-width: 30rem;
+    margin: auto;
+
+    .pvp__btn--cancel {
+      border-radius: 15px;
+      width: 100%;
+      &:hover {
+        background-color: #dddddd;
+        color: black;
+      }
+    }
+    .pvp__btn--create {
+      border-radius: 10px;
+      width: 100%;
+    }
+    .note__pvp {
+      color: #04bc8a;
+    }
+  }
+
+  .waitingRoom__page {
+    max-width: 50rem;
+    margin: auto;
+    .action__row {
+      height: 5rem;
+      width: 30rem;
+      margin: auto;
+      margin-bottom: 2rem;
+      .icon__container {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        &:hover {
+          box-shadow: 0 0 4px 4px #90dac579;
+        }
+        .icon__img {
+          //
+        }
+      }
+    }
+    .user__container {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      .user__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        width: 100%;
+        .user__img--wrapper {
+          border-radius: 50%;
+          position: relative;
+          width: 4rem;
+          height: 4rem;
+          .user__img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 1px 6px 2px #b2b2b2;
+          }
+          .close__icon {
+            opacity: 0;
+            transition: all 0.3s ease;
+            position: absolute;
+            right: -0.4rem;
+            top: -0.2rem;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+            cursor: pointer;
+          }
+          &:hover {
+            .close__icon {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal_invite_user {
+  .modal-header {
+    border-bottom: none;
+    .modal__header--title {
+      flex-grow: 1;
+      text-align: center;
+      border: none;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+  .modal-content {
+    border-radius: 2rem;
+
+    .invite__list {
+      max-height: 50vh;
+      overflow: auto;
+      .invite__list--row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        .avatar_holder {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

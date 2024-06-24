@@ -1,0 +1,4 @@
+export enum Types {
+    GET_CONTEST = "GET_CONTEST",
+    GET_CONTEST_SUCCEED = "GET_CONTEST_SUCCEED",
+}

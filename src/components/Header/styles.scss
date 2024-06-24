@@ -1,0 +1,8 @@
+.header__component {
+  margin: auto;
+  .header--menu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+}

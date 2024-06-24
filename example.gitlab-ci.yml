@@ -1,0 +1,88 @@
+stages:
+  - migration
+  - containerization
+  - deploy
+
+variables:
+  REGISTRY: git.hisoft.com.vn:5050
+  CONTAINER_NAME: recbook-api
+  NAME: ${REGISTRY}/recbook/core-api
+  TAG: ${CI_COMMIT_SHORT_SHA}
+
+migration:
+  stage: migration
+  image: node:lts
+  script:
+    - cp ormconfig.json.example ormconfig.json
+    - sed -i "s/DB_HOST/${DB_HOST}/g" ormconfig.json
+    - sed -i "s/DB_USERNAME/${DB_USERNAME}/g" ormconfig.json
+    - sed -i "s/DB_PASSWORD/${DB_PASSWORD}/g" ormconfig.json
+    - sed -i "s/DB_NAME/${DB_NAME}/g" ormconfig.json
+    - cat ormconfig.json
+    - npm install typeorm ts-node typescript pg
+    - npm run typeorm migration:run
+  cache:
+    untracked: true
+    key: '$CI_BUILD_REF_NAME'
+    paths:
+      - node_modules/
+  only:
+    changes:
+      - src/migration/*
+    refs:
+      - develop-v2 
+
+containerization:
+  stage: containerization
+  script:
+    # Build the container image
+    - echo ${TAG}
+    - docker login ${REGISTRY} -u ${GITLAB_USER} -p ${GITLAB_PASSWORD}
+    - docker build --cache-from ${NAME}:latest -t ${NAME}:${TAG} .
+    # Push the container image to the registry
+    - docker tag ${NAME}:${TAG} ${NAME}:latest
+    # Push image
+    - docker push ${NAME}:${TAG}
+    - docker push ${NAME}:latest
+    # Remove all image except latest, ignore error
+    - docker images | grep "${NAME}" | grep -v "latest" | awk '{print $3}' | xargs docker rmi || true
+  only:
+    refs:
+      - develop-v2
+    
+
+deploy:
+  stage: deploy
+  script:
+    # Pull latest image
+    - docker login ${REGISTRY} -u ${GITLAB_USER} -p ${GITLAB_PASSWORD}
+    - docker pull ${NAME}:latest
+    # Stop running container, ignore error
+    - docker ps -a |  grep "${CONTAINER_NAME}" | awk '{print $1}' | xargs docker rm -f || true
+    # Re-run container in nginx-proxy network & env variables
+    - docker run -d
+      --name=${CONTAINER_NAME}
+      --network="nginx-proxy"
+      -e PORT=80
+      -e CLIENT_ENDPOINT=${CLIENT_ENDPOINT}
+      -e API_ENDPOINT=${API_ENDPOINT}
+      # -e DB_HOST=${DB_HOST}
+      # -e DB_USERNAME=${DB_USERNAME}
+      # -e DB_PASSWORD=${DB_PASSWORD}
+      # -e DB_NAME=${DB_NAME}
+      # -e SENDGRID_API_KEY=${SENDGRID_API_KEY}
+      # -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      # -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      # -e AWS_S3_REGION=${AWS_S3_REGION}
+      # -e AWS_S3_BUCKET=${AWS_S3_BUCKET}
+      # -e AGORA_APP_ID=${AGORA_APP_ID}
+      # -e AGORA_APP_CERTIFICATE=${AGORA_APP_CERTIFICATE}
+      # -e LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      # -e LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+      # -e VIRTUAL_HOST=${VIRTUAL_HOST}
+      ${NAME}:latest
+    # Connect to bridge network
+    - docker ps -a |  grep "${NAME}" | awk 'NR==1{print $1}' | xargs docker network connect bridge
+  only:
+    refs:
+      - develop-v2

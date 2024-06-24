@@ -1,0 +1,30 @@
+.tab__info {
+  padding: 1rem 1.5rem;
+  .button__info {
+    border-radius: 0.75rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+
+.title-affiliate {
+  margin: 30px;
+}
+
+.code-affiliate {
+  background-color: #ededed;
+  width: 500px;
+  height: 32px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-affiliate {
+  width: 100px;
+}
+
+.relative {
+  position: relative;
+}

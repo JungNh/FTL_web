@@ -1,0 +1,129 @@
+.contestrule__component {
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  table {
+    margin-bottom: 1rem;
+  }
+  .content-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4f4f4f;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    .content-banner {
+      background: #ff7a00;
+      opacity: 0.8;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: relative;
+      padding: 100px 63px;
+      .content-banner-title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+        color: #ffffff;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+      img {
+        position: absolute;
+        right: 50px;
+      }
+      svg {
+        position: absolute;
+        left: 15px;
+      }
+      .content-avatar {
+        background: #ffffff;
+        opacity: 0.8;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 250px;
+        // width: 100%;
+        // img {
+        //   width: 100% !important;
+
+        // }
+      }
+      .content-banner-icon {
+        position: absolute;
+        top: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contestrule__component {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    width: 380px;
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table {
+      margin-bottom: 1rem;
+    }
+    .content-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #4f4f4f;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .content-banner {
+      background: #ff7a00;
+      opacity: 0.8;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-left: 50px;
+      margin-right: 20px;
+
+      // position: relative;
+      padding: 20px 150px !important;
+      .content-banner-title {
+        width: 120px;
+        text-align: center;
+        margin-left: -50px !important;
+        margin-right: 30px !important;
+
+        // font-weight: 700;
+        font-size: 30px !important;
+        line-height: 47px;
+        color: #ffffff;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .content-banner-icon {
+        width: 150px !important;
+        height: 150px !important;
+        position: absolute;
+        top: 20px;
+      }
+    }
+  }
+}

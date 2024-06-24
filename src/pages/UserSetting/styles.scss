@@ -1,0 +1,92 @@
+@import './components/TabCardActive/styles.scss';
+@import './components/TabInfo/styles.scss';
+@import './components/TabSetting/styles.scss';
+@import './components/TabMyAcc/styles.scss';
+@import './components/TabNotification/styles.scss';
+@import './components/TabParentControl/styles.scss';
+@import './components/TabStudyRoute/styles.scss';
+@import './components/TabSubAcc/styles.scss';
+@import './components/TabPassword/styles.scss';
+@import './components/TabTutorial/styles.scss';
+@import './components/TabContact/styles.scss';
+@import './components/TabCondition/styles.scss';
+@import './components/TabNews/styles.scss';
+@import './components/TabAffiliate/styles.scss';
+
+.userSetting__page {
+  position: relative;
+  .button__back {
+    display: flex;
+    position: fixed;
+    top: 4rem;
+    left: 2rem;
+    z-index: 1;
+    border-radius: 0.75rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .userSetting_panel-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 19rem;
+    height: 100vh;
+    background: #0066ff;
+    color: #ffffff;
+    padding: 4rem 1rem 0 4rem;
+    font-size: 0.75rem;
+    @media screen and (max-width: 1300px) {
+      width: 15rem;
+    }
+
+    .item-main {
+      padding: 0.5rem 0 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      &.can-hover {
+        cursor: pointer;
+        &:hover,
+        &.active {
+          background: linear-gradient(90deg, #0066ff 0%, #2e81ff 100%);
+        }
+      }
+    }
+    .item-sub {
+      padding: 0.3rem 0 0.3rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        background: linear-gradient(90deg, #0066ff 0%, #2e81ff 100%);
+      }
+    }
+  }
+  .userSetting_panel-right {
+    padding-left: 19rem;
+    // width: 98vw;
+    min-width: 40rem;
+    @media screen and (max-width: 1300px) {
+      padding-left: 15rem;
+    }
+  }
+  .divider_horizontal-white {
+    border-bottom: 0.5px solid #eeeeee;
+  }
+  .tab__wrap {
+    min-width: 20rem;
+    max-width: 50rem;
+  }
+}
+
+.icon-close-qr {
+    margin-right: -40px;
+    margin-top: -35px;
+    cursor: pointer;
+    color: #444444;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    font-size: 28px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+      0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+  }

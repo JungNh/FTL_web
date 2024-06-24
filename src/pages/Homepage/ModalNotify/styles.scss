@@ -1,0 +1,135 @@
+.modal-notify {
+  border-radius: 20px;
+  .modal-dialog {
+    // max-width: 225px;
+    transform: translate(0, 15%) !important;
+  }
+  .modal-title {
+    color: #0066ff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0px;
+  }
+  .modal-line {
+    height: 1px;
+    background-color: #e4f7ff;
+    margin-top: 5px;
+  }
+  .modal-content {
+    // background-image: url('../../assets/images/rules-bg.png');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 37.5rem;
+    border: unset;
+    border-radius: 20px;
+    @media screen and (min-width: 1200px) {
+      width: 615px;
+    }
+
+    .header-list-notify {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .tab-modal-notify {
+      background-color: #e0e0e0;
+      padding: 5px;
+      border-radius: 10px;
+      min-width: 100px;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+      &.active {
+        background-color: #0066ff;
+        border-color: #005cbf;
+        color: white;
+      }
+      .num_noti {
+        position: absolute;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        z-index: 1;
+        right: -10px;
+        border-radius: 15px;
+        top: -15px;
+        align-items: center;
+        justify-content: center;
+        .num_text {
+          color: white;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .tab-modal-notify:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+  .list-notify {
+    overflow-x: scroll;
+    height: 450px;
+    // padding: 0 20px;
+    .notify-item {
+      padding: 20px 20px;
+      display: flex;
+      flex: 1;
+    }
+    .img-notify {
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      margin-right: 10px;
+    }
+    .img-diamond {
+      height: 15px;
+      width: 20px;
+    }
+    .is-reader {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #0066ff;
+      margin-left: 5px;
+    }
+    .seen {
+      display: flex;
+      align-items: center;
+      // justify-content: flex-end;
+    }
+  }
+
+  .noty-empty {
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  .text_bold {
+    font-weight: 600;
+  }
+  .content-modal-notify {
+    // text-align: center;
+    width: '100%';
+  }
+  .icon-close {
+    position: absolute;
+    right: 20px;
+  }
+  .extra_info {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 480px;
+  }
+  .not-read {
+    background-color: #e4f7ff;
+  }
+  .text-time {
+    font-size: 12px;
+    color: gray;
+  }
+}

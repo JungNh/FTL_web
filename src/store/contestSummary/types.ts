@@ -1,0 +1,3 @@
+export enum Types {
+    SET_CONTEST_SUMMARY_STATE = "SET_CONTEST_SUMMARY_STATE",
+}

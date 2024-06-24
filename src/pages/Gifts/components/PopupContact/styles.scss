@@ -1,0 +1,27 @@
+.popupcontact__component {
+  .content__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 2.5rem;
+    p {
+      margin: 0 !important;
+      text-align: center !important;
+    }
+  }
+  button {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #eeeeee;
+    padding: 0.75rem 2.1875rem;
+  }
+}

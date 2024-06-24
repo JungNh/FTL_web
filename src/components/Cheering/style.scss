@@ -1,0 +1,51 @@
+.bg_cheer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    // justify-content: center;
+    align-items: center;
+    .img_fubo {
+      position: absolute;
+      height: 80vh;
+      object-fit: cover;
+      z-index: -1;
+      bottom: 0;
+    }
+    .cheering_background {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .bg_cheer_text {
+      margin-top: 10vh;
+      height: 20vh;
+      width: 50vh;
+    }
+    .cheering_text_img {
+      position: absolute;
+      height: 20vh;
+      // z-index: 1;
+    }
+    .container_text {
+      position: absolute;
+      display: flex;
+      height: 16vh;
+      width: 48vh;
+      padding: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn_cheer {
+      position: fixed;
+      top: 95vh;
+      width: 24vw;
+      left: 38vw;
+      cursor: pointer;
+    }
+    .padding_btn{
+      top: 90vh;
+    }
+  }
+  

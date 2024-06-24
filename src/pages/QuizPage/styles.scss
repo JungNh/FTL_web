@@ -1,0 +1,37 @@
+.quizpage__page {
+  .quizpage__header {
+    border: 1px solid #c4c4c4;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #0066ff;
+    padding: 0.9375rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .quizpage__body {
+    display: flex;
+    gap: 0.9375rem;
+    padding: 2.5rem 1.875rem;
+    .body__left {
+      width: 30%;
+      button {
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24),
+          0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+          0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #ffffff;
+      }
+    }
+    .body__right {
+      width: 70%;
+    }
+  }
+}
+.no-data {
+  margin: 1.875rem auto;
+  text-align: center;
+  width: 100%;
+}

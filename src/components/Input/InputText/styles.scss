@@ -1,0 +1,33 @@
+.input__component {
+  background: #eeeeee !important;
+  border-color: #eeeeee !important;
+  border-radius: 6px !important;
+  line-height: 2rem !important;
+  height: 2rem;
+  &::placeholder {
+    color: #bdbdbd !important;
+  }
+  &.has__error {
+    border-color: red !important;
+    &:focus {
+      box-shadow: 0 0 0 0.2rem #ff000021;
+    }
+  }
+  &.input__password {
+    padding-right: 2rem;
+  }
+}
+.input__date {
+  width: 100%;
+}
+
+.input__component--wrapper {
+  position: relative;
+  .input__icon__eye {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}

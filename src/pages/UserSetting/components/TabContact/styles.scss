@@ -1,0 +1,27 @@
+.tab__contact {
+  padding: 4rem 1.5rem;
+  .contact__row {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .text__contact {
+      flex: 1;
+      padding-left: 1rem;
+    }
+    .button__chat {
+      width: 150px;
+    }
+
+    .contact__link {
+      color: #0066ff;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

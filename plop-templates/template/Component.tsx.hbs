@@ -1,0 +1,18 @@
+import * as React from 'react'
+import type { FC } from 'react'
+import { useTranslation } from 'react-i18next'
+import './styles.scss'
+
+type Props = {}
+
+const {{pascalCase name}}: FC<Props> = (props) => {
+  const { t } = useTranslation(['lang'])
+
+  return (
+    <div className="{{lowerCase name}}__component">
+      {{pascalCase name}}
+    </div>
+  )
+}
+
+export default {{pascalCase name}}

@@ -1,0 +1,96 @@
+.lession__multiChoice--picture {
+  .subTitle__lession {
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #4f4f4f;
+    margin-bottom: 0;
+  }
+
+  .title__lession {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0066ff;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main__question {
+    display: flex;
+    justify-content: center;
+    height: 14.75rem;
+    .main__question--image {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+
+      .image__text {
+        position: absolute;
+        margin-bottom: 0;
+        bottom: 0.2rem;
+        max-width: 13rem;
+        text-align: center;
+        line-height: 1rem;
+        max-height: 2rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .answers__section {
+    max-width: 60rem;
+    margin: auto;
+    .progress__time {
+      height: 6px;
+      .bg-success {
+        border-radius: 6px;
+      }
+    }
+    .answer_btn {
+      padding: 1rem 1rem;
+    }
+  }
+
+  .audioPlayer_custom {
+    padding-left: 0;
+    padding-right: 0;
+    .rhap_progress-section {
+      .rhap_progress-container {
+        margin: 0;
+        .rhap_progress-bar {
+          height: 0.5rem;
+          border-radius: 0.5rem;
+          .rhap_progress-indicator {
+            display: none;
+          }
+          .rhap_progress-filled {
+            background-color: #04bc8a;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes activeSound {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}

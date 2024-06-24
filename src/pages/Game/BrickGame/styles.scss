@@ -1,0 +1,805 @@
+.game__brick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .game__background {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .game__header {
+    position: absolute;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 21;
+    .btn__back {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      cursor: pointer;
+      transition: 0.3s all ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .btn__sound,
+    .btn__time {
+      position: absolute;
+      top: 1rem;
+      left: 5rem;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      cursor: pointer;
+      transition: 0.3s all ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .btn__time {
+      left: 9rem;
+    }
+
+    .showTimer {
+      left: 20rem !important;
+    }
+
+    .label_time {
+      position: absolute;
+      top: 0.4rem;
+      left: 13rem;
+      font-family: 'Mali';
+      font-style: italic;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 69px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .heart__wrapper {
+      position: absolute;
+      top: 1rem;
+      left: 13rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 17.5rem;
+      transition: 0.3s all linear;
+      overflow: hidden;
+      .heart {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.5rem;
+        object-fit: cover;
+      }
+
+      &.live-0 {
+        width: 0rem;
+      }
+      &.live-1 {
+        width: 3.5rem;
+      }
+      &.live-2 {
+        width: 7rem;
+      }
+      &.live-3 {
+        width: 10.5rem;
+      }
+      &.live-4 {
+        width: 14rem;
+      }
+      &.live-5 {
+        width: 17.5rem;
+      }
+    }
+    .score__container {
+      position: absolute;
+      top: 1rem;
+      right: 12rem;
+      font-weight: bold;
+      color: white;
+      height: 3rem;
+      text-align: center;
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+    .logo {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      height: 3rem;
+      object-fit: cover;
+    }
+  }
+
+  .welcome__screen {
+    .btn__play {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 13rem;
+      cursor: pointer;
+      z-index: 1;
+      .btn__play--image {
+        object-fit: contain;
+        width: 100%;
+      }
+      .btn__play--text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        color: white;
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .welcome__game--name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .welcome__game--image {
+        width: 30rem;
+        height: 30rem;
+        object-fit: contain;
+      }
+    }
+
+    .brick_ico {
+      position: absolute;
+      // transform: translate(-50%, -50%);
+      width: 3rem;
+      height: 3rem;
+      .brick__image {
+        object-fit: contain;
+        width: 3rem;
+        height: 3rem;
+      }
+
+      &.brick--1 {
+        top: 25%;
+        left: 20%;
+      }
+      &.brick--2 {
+        top: 25%;
+        left: 80%;
+      }
+      &.brick--3 {
+        top: 75%;
+        left: 25%;
+      }
+      &.brick--4 {
+        top: 75%;
+        left: 75%;
+      }
+    }
+  }
+
+  .screen__playing {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60rem;
+    height: 100vh;
+    overflow: hidden;
+    .question__container {
+      position: absolute;
+      top: 50%;
+      width: 30%;
+      height: 30rem;
+      transform: translateY(-50%);
+
+      .question--wrapper {
+        width: 100%;
+        position: relative;
+        .question--board {
+          width: 100%;
+        }
+        .question--text {
+          position: absolute;
+          font-size: 2rem;
+          font-style: italic;
+          color: white;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .hammer__wrapper {
+        margin-top: 5rem;
+        width: 100%;
+        .ico__hammer {
+          width: 80%;
+          margin-left: 10%;
+          object-fit: contain;
+        }
+      }
+    }
+    .image__container {
+      position: absolute;
+      top: 100px;
+      left: 30%;
+      width: 60%;
+      height: 70vh;
+      // background-color: wheat;
+
+      .question__image--container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 25rem;
+        height: 18;
+        .question__image {
+          width: 25rem;
+          height: 18rem;
+          object-fit: contain;
+        }
+      }
+      .group__brick {
+        width: 15rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        cursor: pointer;
+        &.no-hover {
+          cursor: auto;
+        }
+        &.brick__hidden {
+          opacity: 0 !important;
+        }
+
+        &:hover:not(.no-hover) {
+          filter: drop-shadow(0px 0px 10px #ffffff);
+        }
+        .brick__item {
+          width: 3rem;
+          height: 2.6rem;
+          z-index: 1;
+          transition: 0.3s all ease;
+          .brick__item--image {
+            // origin size: 102 x 108
+            width: 3rem;
+            object-fit: cover;
+          }
+        }
+        .brick__item--5,
+        .brick__item--6,
+        .brick__item--7,
+        .brick__item--8,
+        .brick__item--9,
+        .brick__item--15,
+        .brick__item--16,
+        .brick__item--17,
+        .brick__item--18,
+        .brick__item--19 {
+          transform: translateX(-50%);
+        }
+
+        .ico__hammer--inBrick {
+          width: 5rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          transform-origin: bottom left;
+          .ico__hammer--inBrick--image {
+            width: 5rem;
+          }
+        }
+      }
+
+      .group__brick--0 {
+        transform: translate(-100%, -100%);
+      }
+      .group__brick--1 {
+        transform: translate(0, -100%);
+      }
+      .group__brick--2 {
+        transform: translate(-100%, 0);
+      }
+      .group__brick--3 {
+        transform: translate(0, 0);
+      }
+    }
+    .score__container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 90%;
+      width: 10%;
+      height: 30rem;
+      .ico__score--arrow {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-115%);
+        transition: 0.3s all ease;
+        top: 5rem;
+        width: 3rem;
+        &.score-5 {
+          top: 5rem;
+        }
+        &.score-3 {
+          top: 13rem;
+        }
+        &.score-1 {
+          top: 21rem;
+        }
+      }
+      .ico__score--ladder {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30rem;
+        z-index: 1;
+      }
+      .ico__score--point {
+        position: absolute;
+        left: 50%;
+        .icon__score--pointText {
+          position: absolute;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+          width: 3rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+        .icon__score--pointBoard {
+          width: 3rem;
+          z-index: -1;
+        }
+        &.ico__score--point-5 {
+          top: 5rem;
+        }
+        &.ico__score--point-3 {
+          top: 13rem;
+        }
+        &.ico__score--point-1 {
+          top: 21rem;
+        }
+      }
+    }
+    .answers__container {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .answers__item {
+        position: relative;
+        transition: 0.3s all ease;
+        cursor: pointer;
+        .answers__item--board {
+          width: 13rem;
+          object-fit: contain;
+        }
+        .answers__item--text {
+          width: 13rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          color: white;
+          font-weight: bold;
+          font-size: 1.5rem;
+          text-align: center;
+          transform: translate(-50%, -50%);
+        }
+        &:hover:not(.no-hover) {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .incorrect__screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000065;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+    z-index: 20;
+    .incorrect__screen--imageWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .incorrect__screen--image {
+        width: 200px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .correct__screen {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60rem;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 20%;
+    .board__question--wrapper {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      width: 55%;
+      height: 30rem;
+      transform: translateY(-50%);
+      .board__question--board {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+        transform: translateY(-50%);
+      }
+      .board__question--text {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .board__question--image {
+        position: absolute;
+        top: 34%;
+        left: 50%;
+        width: 25rem;
+        height: 14rem;
+        transform: translateX(-50%);
+        object-fit: contain;
+      }
+    }
+    .continue__section {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 20rem;
+      height: 33rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+      .continue__section--score {
+        width: 20rem;
+        height: 8rem;
+        .continue__section--board {
+          position: absolute;
+          top: 0;
+          width: 20rem;
+          height: 8rem;
+          object-fit: fill;
+        }
+        .continue__section--text {
+          position: absolute;
+          top: 4rem;
+          color: white;
+          transform: translateY(-50%);
+          width: 100%;
+          .excellent {
+            font-style: italic;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 0;
+          }
+          .text-exp {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .robo__wrapper {
+        position: absolute;
+        top: 10rem;
+        height: 23rem;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .robo__happy {
+          height: 18rem;
+        }
+        .btn__continue {
+          position: relative;
+          height: 4rem;
+          &:hover {
+            transform: scale(1.1);
+          }
+          .btn__continue--image {
+            height: 4rem;
+            width: 10rem;
+            object-fit: contain;
+          }
+          .btn__continue--text {
+            position: absolute;
+            top: 2rem;
+            width: 10rem;
+            text-align: center;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .correct__screen--sound {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 23%;
+      left: 0;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .summary__sound {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    .summary__sound--title {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 4rem;
+      object-fit: contain;
+      z-index: 1;
+    }
+    .summary__sound--table {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 77vh;
+      display: grid;
+      width: 90%;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr 1fr;
+      background: linear-gradient(
+        180deg,
+        rgba(134, 184, 223, 0.2) 0%,
+        rgba(10, 102, 175, 0.2) 100%
+      );
+      border: 8px solid #103a61;
+      box-sizing: border-box;
+      border-radius: 40px;
+      row-gap: 1rem;
+      padding: 3rem 2rem;
+
+      .summary__sound--item {
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        transition: 0.5s transform ease;
+        width: 200px;
+        @media screen and (max-width: 1300px) {
+          width: 150px;
+        }
+        &.popup {
+          transform: scale(1.1);
+        }
+        .item__content--wrap {
+          position: absolute;
+          font-family: 'Mali', cursive;
+          font-size: 24px;
+          color: white;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          text-align: center;
+          padding: 2rem;
+          .item__content--image {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            object-fit: contain;
+            @media screen and (max-width: 1300px) {
+              width: 100px;
+              height: 100px;
+            }
+          }
+          .item__content--text {
+            position: absolute;
+            top: calc(5% + 155px);
+            left: 2.5%;
+            width: 95%;
+            font-family: 'Mali', cursive;
+            color: white;
+            text-align: center;
+            @media screen and (max-width: 1300px) {
+              top: calc(5% + 105px);
+              font-size: 16px;
+            }
+          }
+        }
+        .item__box {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .summary__final {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+
+    .summary__score--list {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .image__score--wrapper {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 8px;
+        .image__score--content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 2rem;
+          height: 2rem;
+          transform: translate(-50%, -50%);
+          object-fit: contain;
+          z-index: 1;
+        }
+        .image__score--btn {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 4rem;
+          height: 4rem;
+          object-fit: contain;
+        }
+      }
+    }
+    .continue__wraper {
+      position: absolute;
+      top: 40%;
+      right: 15%;
+      width: 30rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .board__wraper {
+        width: 20rem;
+        height: 8rem;
+        position: relative;
+        .board--image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20rem;
+          height: 8rem;
+          object-fit: fill;
+        }
+        .board--text {
+          padding: 0.5rem 1rem;
+          position: absolute;
+          color: white;
+          font-size: 1.5rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20rem;
+          text-align: center;
+          p:nth-child(1) {
+            font-style: italic;
+          }
+        }
+      }
+      .robo__wraper {
+        width: 10rem;
+        object-fit: contain;
+
+        .robo__image {
+          width: 10rem;
+          object-fit: contain;
+        }
+
+        .btn__try {
+          width: 10rem;
+          object-fit: contain;
+          position: relative;
+          cursor: pointer;
+          transition: 0.3s all ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+          .btn__try--image {
+            width: 100%;
+            height: 4rem;
+          }
+          .btn__try--text {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            margin-bottom: 0;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1300px) {
+      .continue__wraper {
+        right: 5%;
+      }
+      .game__name {
+        left: 5%;
+      }
+    }
+  }
+}

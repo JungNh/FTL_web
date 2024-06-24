@@ -1,0 +1,23 @@
+.custom__switch {
+  cursor: pointer;
+  .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url('../../../assets/images/ico_check-green.svg');
+    cursor: pointer;
+  }
+  .custom-control-input:checked ~ .custom-control-label::before {
+    cursor: pointer;
+    border-color: #04bc8a;
+    background-color: #04bc8a;
+  }
+
+  .custom-control-input ~ .custom-control-label::before {
+    cursor: pointer;
+    border-color: #bdbdbd;
+    background-color: #bdbdbd;
+  }
+  .custom-control-input ~ .custom-control-label::after {
+    cursor: pointer;
+    background-image: url('../../../assets/images/ico_x-gray.svg');
+    background-color: #ffffff;
+  }
+}

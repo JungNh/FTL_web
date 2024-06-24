@@ -1,0 +1,21 @@
+.bg_btn {
+  position: relative;
+  width: fit-content;
+  .num_noti {
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    z-index: 1;
+    right: 0px;
+    border-radius: 15px;
+    top: -10px;
+    align-items: center;
+    justify-content: center;
+    .num_text {
+      color: white;
+      font-size: 16px;
+    }
+  }
+}

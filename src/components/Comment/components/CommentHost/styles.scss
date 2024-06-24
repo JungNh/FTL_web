@@ -1,0 +1,45 @@
+.comment__component--host {
+  .avata__holder {
+    width: 2rem;
+    border: 1px solid #bdbdbd;
+    object-fit: contain;
+  }
+  .host__text {
+    font-size: 0.5625rem;
+    color: #bdbdbd;
+    line-height: 0.8rem;
+    margin-bottom: 0;
+  }
+  .host__title {
+    line-height: 1rem;
+    .host__name {
+      font-size: 0.75rem;
+      color: #4f4f4f;
+      font-weight: bolder;
+      margin-bottom: 0;
+    }
+    .host__time {
+      font-size: 0.5625rem;
+      color: #4f4f4f;
+      margin-bottom: 0;
+    }
+  }
+
+  .comment__content {
+    font-size: 0.75rem;
+    color: #4f4f4f;
+    text-align: justify;
+  }
+
+  .action__item {
+    font-size: 0.5625rem;
+    color: #bdbdbd;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+    .action__item--icon {
+      margin-right: 3px;
+    }
+  }
+}

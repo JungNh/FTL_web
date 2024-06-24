@@ -1,0 +1,190 @@
+.direction__page {
+  .target__section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .options__target {
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+
+    .target__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .button__title {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .button__subTitle {
+        margin: 0;
+        font-weight: bold;
+        font-size: 0.65rem;
+        text-align: end;
+      }
+    }
+    .options_btn {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+        0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+      border-radius: 6px;
+    }
+
+    .marathon__btn {
+      background-image: url('../../../../assets/images/colorfulBackground.jpeg');
+      background-size: cover;
+      background-position: center;
+      border: hidden;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+        0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+
+      &.active,
+      &:focus {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 15px 10px #379cee !important;
+      }
+
+      .marathon__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .button__title {
+          color: linear-gradient(
+            112.64deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.5) 100%
+          );
+          text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+          .main__text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: start;
+          }
+          .sub__text {
+            font-weight: bold;
+            font-size: 9px;
+            text-align: start;
+          }
+        }
+        .button__subTitle {
+          color: linear-gradient(
+            112.64deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.5) 100%
+          );
+          backdrop-filter: blur(12px);
+          font-weight: bold;
+
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          margin: 0;
+          text-align: end;
+        }
+      }
+    }
+  }
+
+  .time__section {
+    display: flex;
+    width: fit-content;
+
+    .time__text {
+      background: #ffffff;
+      cursor: pointer;
+      color: #4f4f4f;
+      border-radius: 0.75rem;
+      font-weight: bold;
+      font-size: 1.125rem;
+      text-align: center;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+        0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+      margin: 0 1rem;
+      &.active {
+        color: #007bff;
+      }
+      &:hover {
+        background: #eeeeee;
+      }
+      .time__content {
+        font-weight: bold;
+        font-size: 4rem;
+        padding: 0.5rem 2rem;
+      }
+    }
+    .day__part {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .time__text {
+        padding: 1rem 1.15rem;
+      }
+    }
+  }
+}
+
+.modal__time {
+  width: 800px !important;
+  max-width: 800px !important;
+  .modal-content {
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+  }
+  .time__btn {
+    background-color: #ffffff;
+    color: #4f4f4f;
+    font-weight: bold;
+    margin: 0 3px !important;
+    border-color: #bbbbbb;
+    border-left: 0.5px solid #bbbbbb;
+    border-right: 0.5px solid #bbbbbb;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    border-radius: 10px !important;
+
+    &:first-child {
+      border-left: 2px solid #bbbbbb;
+    }
+    &:last-child {
+      border-right: 2px solid #bbbbbb;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      // box-shadow: none;
+      background-color: #dddddd !important;
+      color: #4f4f4f;
+    }
+    &.active {
+      background-color: #007bff !important;
+      color: #ffffff;
+    }
+  }
+  .button__oke,
+  .button__cancel {
+    width: 120px;
+    margin: 0 !important;
+  }
+
+  .button__cancel {
+    background-color: white;
+    border: 1px solid #dddddd !important;
+    color: #4f4f4f;
+    margin-right: 0.5rem !important;
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+      background-color: #dddddd !important;
+      color: #4f4f4f;
+    }
+  }
+}

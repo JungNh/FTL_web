@@ -1,0 +1,108 @@
+.arenapage__component {
+  .button__home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+
+    .button__gift {
+      z-index: 1000;
+      position: fixed;
+      right: 2.5rem;
+      top: 1rem;
+      border-radius: 0.75rem;
+      padding: 0.75rem;
+      width: fit-content;
+      height: 3rem;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.1875rem;
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: initial;
+        }
+      }
+    }
+    .button__hd{
+      z-index: 1000;
+      position: fixed;
+      right: 10.5rem;
+      top: 1rem;
+      border-radius: 0.75rem;
+      padding: 0.75rem;
+      width: fit-content;
+      height: 3rem;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.1875rem;
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: initial;
+        }
+      }
+    }
+  }
+  .arenapage__wrapper {
+    .content__list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.875rem;
+    }
+    .loading__icon {
+      margin: 0 auto;
+    }
+    .form-search {
+      padding: 5px 0px 5px 0px;
+      margin: auto;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      .input-group {
+        border-radius: 10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #007DD3;
+        border: 2px solid #007DD3 ;
+
+
+      }
+      .search-input{
+        padding: 7px;
+        flex: 1;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .search-text {
+        color: white;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .search-icon{
+        font-size: 20px;
+        color: white;
+        margin-left: 10px;
+
+      }
+      .button-search{
+        padding: 5px 0px 5px 0px;
+      }
+      .button-search:hover{
+        background-color: #0793f0;
+        border-top-right-radius: 10px;
+
+      }
+    }
+  }
+}

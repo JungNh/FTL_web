@@ -1,0 +1,680 @@
+.spin__game {
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+
+  .btn__time {
+    position: absolute;
+    top: 25px;
+    left: 5rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn__time {
+    left: 9rem;
+  }
+
+  .showTimer {
+    left: 320px !important;
+  }
+
+  .label_time {
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    font-family: 'Mali';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 69px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .heart_ico {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    display: flex;
+  }
+  
+  .game__background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0%;
+    object-fit: cover;
+  }
+  .game-button {
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateY(3px) !important;
+    }
+  }
+
+  .font-text {
+    font-family: 'Mali', cursive;
+    font-size: 60px;
+    color: white;
+    line-height: 75.4px;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    right: 270px;
+    width: fit-content;
+    @media screen and (max-width: 1300px) {
+      font-size: 40px;
+    }
+  }
+  .game-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .container-spinner {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // margin-top: 5px;
+    transition: transform 5s cubic-bezier(0.25, 0.1, 0, 1);
+  }
+
+  .game-spinner {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .game-spinner-btn {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    z-index: 2;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 1s scale linear;
+    transform: translate(-55%, -50%) scale(0.7);
+    &.effect__scale {
+      animation: scaleUp 1s linear infinite;
+    }
+  }
+
+  .high__light {
+    position: fixed;
+    top: 46.5%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 249px;
+    height: 157px;
+    z-index: 1;
+    .light {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: yellowgreen;
+      animation: infinite lightUp 0.5s;
+      // transition: all ease 2s;
+    }
+    .light_1 {
+      top: 37%;
+      left: 26%;
+    }
+    .light_2 {
+      top: 24%;
+      left: 48%;
+    }
+    .light_3 {
+      top: 11%;
+      left: 70%;
+    }
+    .light_4 {
+      top: 0%;
+      left: 88%;
+    }
+    .light_5 {
+      top: 22%;
+      left: 93%;
+    }
+    .light_6 {
+      top: 47%;
+      left: 95%;
+    }
+    .light_7 {
+      top: 72%;
+      left: 94%;
+    }
+    .light_8 {
+      top: 93%;
+      left: 91%;
+    }
+    .light_9 {
+      top: 84%;
+      left: 70%;
+    }
+    .light_10 {
+      top: 75%;
+      left: 49%;
+    }
+    .light_11 {
+      top: 66%;
+      left: 27%;
+    }
+
+    @keyframes lightUp {
+      0% {
+        background-color: yellowgreen;
+      }
+      50% {
+        background-color: white;
+      }
+      100% {
+        background-color: yellowgreen;
+      }
+    }
+  }
+
+  .text-spinner {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+    line-height: 50px;
+    @media screen and (max-width: 1300px) {
+      font-size: 20px;
+    }
+  }
+  .button-spin {
+    z-index: 2;
+    margin-left: 25px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05) translate(-50%, -50%);
+    }
+  }
+
+  .lucky-item {
+    position: absolute;
+    overflow: hidden;
+    font-family: 'Mali', cursive;
+    padding-left: 80px;
+    width: 231px;
+    text-align: right;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    color: white;
+    z-index: 1;
+    font-size: 22px;
+  }
+
+  .container-game {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    // background-image: url('../../../assets/game-images/bg-spin-2.png');
+    .header-game {
+      position: absolute;
+      top: 25px;
+      left: 50px;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+    .heart__icon {
+      width: 55px;
+      height: 55px;
+    }
+  }
+  .game-background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .back-button {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+  }
+  .start-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    animation: scaleUp 1s linear infinite;
+    cursor: pointer;
+    .btn__play--text{
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .chat-game {
+    position: absolute;
+    top: 70%;
+    margin-left: 50px;
+  }
+  .container-chat-game {
+    width: 100%;
+  }
+  .chat-text-game {
+    position: absolute;
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  .left-chat-game {
+    position: relative;
+    width: 400px;
+  }
+  .sound-game {
+    position: absolute;
+    top: 80%;
+    right: 50px;
+  }
+
+  .correct-answer {
+    margin-left: 50px;
+    margin-top: -100px;
+  }
+
+  .incorrect-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000065;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+    z-index: 3;
+  }
+  .icon-incorrect-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .answer-animation {
+    transition: all 0.2s ease-in-out;
+  }
+  .answer-animation:hover {
+    transform: scale(1.2);
+  }
+
+  .container-correct-game-spin {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 30%;
+    .result-game {
+      position: relative;
+      width: 100%;
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 50px;
+        color: white;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        @media screen and (max-width: 1300px) {
+          font-size: 30px;
+        }
+      }
+
+      .result-image-game {
+        position: absolute;
+        width: 80%;
+        height: 50%;
+        object-fit: contain;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  }
+
+  .sound-result-game {
+    position: fixed;
+    top: 50%;
+    left: 50px;
+  }
+  .container-point-game {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    .result-game {
+      position: relative;
+      width: 400px;
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        .text-exp {
+          font-size: 50px;
+        }
+      }
+    }
+    .continue-game {
+      position: relative;
+      width: 170px;
+      margin: auto;
+      margin-top: 20px;
+      .result-game {
+        width: 100%;
+      }
+      .btn__continue--text {
+        position: absolute;
+        bottom: 0%;
+        z-index: 1;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      .continue-game {
+        width: 100%;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .summary-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 8vh;
+    z-index: 1;
+  }
+
+  .table-summary-spin {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15%;
+    width: 100%;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+
+    .results__container {
+      position: absolute;
+      width: 90%;
+      height: 77vh;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        180deg,
+        rgba(134, 184, 223, 0.2) 0%,
+        rgba(10, 102, 175, 0.2) 100%
+      );
+      border: 8px solid #103a61;
+      box-sizing: border-box;
+      border-radius: 40px;
+      display: grid;
+      // padding: 1rem;
+      grid-template-areas:
+        '1fr 1fr 1fr 1fr 1fr'
+        '1fr 1fr 1fr 1fr 1fr';
+      align-items: center;
+      row-gap: 1rem;
+      padding: 3rem 2rem;
+      .box-summary-spin {
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        transition: 0.5s transform ease;
+        width: 200px;
+        @media screen and (max-width: 1300px) {
+          width: 150px;
+        }
+        .box__border {
+          object-fit: contain;
+          width: 100%;
+        }
+        &.popup {
+          transform: scale(1.1);
+        }
+
+        .text-box-summary {
+          position: absolute;
+          font-family: 'Mali', cursive;
+          font-size: 24px;
+          color: white;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          text-align: center;
+          padding: 2rem;
+          .image-box-summary {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 170px;
+            height: 150px;
+            position: absolute;
+            object-fit: contain;
+            @media screen and (max-width: 1300px) {
+              width: 120px;
+              height: 100px;
+            }
+          }
+          p {
+            position: absolute;
+            top: calc(5% + 155px);
+            left: 2.5%;
+            width: 95%;
+            font-family: 'Mali', cursive;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+
+            @media screen and (max-width: 1300px) {
+              top: calc(5% + 105px);
+              font-size: 16px;
+            }
+          }
+        }
+
+        .correct__box {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .box-finish-summary {
+    position: relative;
+    margin: 10px;
+    width: 100px;
+    .icon__result-boolean{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 45px;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .again-game {
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .result-game {
+      width: 150px;
+    }
+    .btn__continue--text {
+      position: absolute;
+      bottom: 2%;
+      z-index: 1;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+    .continue-game {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+
+  .result-game-spin {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 300px;
+  }
+
+  .container-again {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    .again-container-text {
+      position: relative;
+
+      width: 400px;
+      margin: auto;
+      margin-top: 20px;
+      .again-text {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  .container-spin-answer {
+    .container-anwsers {
+      position: relative;
+      height: 175px;
+      transition: 0.3s all ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .container-spin-answer__left {
+      position: absolute;
+      top: 20%;
+      left: 50px;
+      width: 200px;
+    }
+    .container-spin-answer__right {
+      position: absolute;
+      top: 20%;
+      right: 50px;
+      width: 200px;
+    }
+    .answer-spin {
+      position: absolute;
+      top: 50%;
+      width: 220px;
+      height: 130px;
+      object-fit: contain;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      @media screen and (max-width: 1300px) {
+        width: 200px;
+        height: 95px;
+      }
+    }
+    .answer-border {
+      position: absolute;
+      width: 280px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media screen and (max-width: 1300px) {
+        width: 200px;
+      }
+    }
+  }
+
+  .user-drag--none {
+    -webkit-user-drag: none;
+  }
+  .user-select--none {
+    user-select: none;
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}

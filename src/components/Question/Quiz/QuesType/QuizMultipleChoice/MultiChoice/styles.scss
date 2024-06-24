@@ -1,0 +1,131 @@
+.quiz__multiple__choice {
+  .subTitle__lession {
+    font-weight: bold;
+    font-size: 1.125rem;
+    // text-align: center;
+    color: #4f4f4f;
+  }
+
+  .title__lession {
+    font-weight: bold;
+    font-size: 1.5rem;
+    // text-align: center;
+    color: #0066ff;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main__question {
+    display: flex;
+    justify-content: center;
+    .main__image--container {
+      position: relative;
+      background: #0066ff;
+      border-radius: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 2px 0px #0056d6, 0px 3px 3px rgba(0, 0, 0, 0.5);
+      width: 11rem;
+      height: 11rem;
+      .main__image {
+        // background: #000;
+        border-radius: 11rem;
+        width: 11rem;
+        height: 11rem;
+        padding: 3rem;
+      }
+      .effect__sound {
+        position: absolute;
+        z-index: -1;
+        width: 15rem;
+        height: 15rem;
+        color: #b7d4ff;
+        animation: 1.5s linear infinite activeSound;
+      }
+      .snail-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: #ffb800;
+        border-color: #ffb800;
+        border-radius: 200px;
+        box-shadow: none;
+        transition: all ease 0.3s;
+        filter: drop-shadow(0px 2px 0px #ff9900), drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
+        &:hover,
+        &:active {
+          background-color: #cfad58;
+          box-shadow: none;
+        }
+        &:focus {
+          background-color: #ffb800;
+          border-color: #ffb800;
+        }
+
+        &.fast__snail {
+          background-color: green;
+          border-color: green;
+        }
+      }
+    }
+  }
+
+  .answers__section {
+    width: 30rem;
+    margin: auto;
+    .progress__time {
+      height: 6px;
+      .bg-success {
+        border-radius: 6px;
+      }
+    }
+    .answer_btn {
+      padding: 1rem;
+    }
+  }
+
+  .audioPlayer_custom {
+    padding-left: 0;
+    padding-right: 0;
+    .rhap_progress-section {
+      .rhap_progress-container {
+        margin: 0;
+        .rhap_progress-bar {
+          height: 0.5rem;
+          border-radius: 0.5rem;
+          .rhap_progress-indicator {
+            display: none;
+          }
+          .rhap_progress-filled {
+            background-color: #04bc8a;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes activeSound {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,19 @@
+import { Reducer } from 'redux'
+import { Types } from './types'
+import States from './states'
+
+const initialState: States = {
+  example: [],
+}
+const {{pascalCase name}}Reducer: Reducer<States> = (state = initialState, action) => {
+  switch (action.type) {
+    {{!-- case Types.SAVE_EXAMPLE:
+      return {
+        ...state,
+        example: [...action.payload],
+      } --}}
+    default:
+      return state
+  }
+}
+export default {{pascalCase name}}Reducer

@@ -1,0 +1,271 @@
+.home__offline {
+  width: 100%;
+  .home__offline--header {
+    position: absolute;
+    padding-top: 1rem;
+    height: 7rem;
+    width: 99vw;
+    left: 4px;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    .button__back {
+      display: flex;
+      position: fixed;
+      left: 2.5rem;
+      top: 1rem;
+      background: #eeeeee;
+      border-radius: 12px;
+      width: 3rem;
+      height: 3rem;
+    }
+    .title__lession {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #0066ff;
+    }
+    .tabs--item {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #0066ff;
+      border-bottom: 1px solid #eaeaea;
+      cursor: pointer;
+      position: relative;
+      width: 50%;
+      &::before {
+        content: '';
+        width: 0%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        border-bottom: 2px solid #8e8e93;
+        transition: 0.3s all ease;
+      }
+      &.left {
+        &::before {
+          right: 0;
+        }
+      }
+      &.right {
+        &::before {
+          left: 0;
+        }
+      }
+      &.active {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .list__exam {
+    margin-top: 8rem;
+    .list__exam--item {
+      border: 1px solid #d1d1d6;
+      border-radius: 26px;
+      width: 100%;
+      padding: 1rem;
+      transition: 0.3s all ease;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      &:hover {
+        border-color: #0056d6;
+        box-shadow: 0 0 2px 2px #0056d6;
+        .list__exam--icon {
+          transform: rotate(360deg);
+        }
+      }
+      .list__exam--icon {
+        transition: 0.3s all ease;
+        transform: rotate(0deg);
+      }
+      .list__exam--title {
+        font-weight: bold;
+        font-size: 20px;
+        color: #0056d6;
+      }
+      .list__exam--count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        font-size: 18px;
+        color: #4f4f4f;
+      }
+    }
+    .list__exam--loading {
+      border: 1px solid #d1d1d6;
+      border-radius: 26px;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      .loading_text {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      .dot_wrap {
+        width: 15px;
+        margin-left: 5px;
+        overflow: hidden;
+        .dot_animation {
+          width: 15px;
+          overflow: hidden;
+          white-space: nowrap;
+          animation: 1s spark infinite linear;
+          transition: ease;
+        }
+        @keyframes spark {
+          0% {
+            width: 0px;
+          }
+          100% {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+  .offline__report {
+    margin-top: 8rem;
+    max-height: calc(100vh - 112px);
+    .offline__report--header {
+      position: relative;
+      .select_contest {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15rem;
+      }
+    }
+    .circle__wraper {
+      display: flex;
+      justify-content: space-around;
+      .circle__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .circle__item--title {
+          font-weight: bold;
+          font-size: 14px;
+          color: #0056d6;
+        }
+        .circlePercent {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+    }
+    .table__report {
+      border: 1px solid #d1d1d6;
+      table {
+        width: 100%;
+        thead {
+          tr {
+            th {
+              border-bottom: 1px solid #d1d1d6;
+              padding: 0.5rem 0;
+              text-align: center;
+            }
+            th:not(:first-of-type):not(:last-of-type) {
+              border-left: 1px solid #d1d1d6;
+            }
+          }
+        }
+        tr:not(:last-child) {
+          td {
+            border-bottom: 1px solid #d1d1d6;
+            text-align: center;
+          }
+        }
+        td:not(:first-child) {
+          border-left: 1px solid #d1d1d6;
+        }
+        td {
+          padding: 0.5rem 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .list__contest {
+    margin-top: 8rem;
+    .list__contest--filter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 1rem;
+      .select_contest {
+        width: 15rem;
+        margin: 0 1rem;
+      }
+      .input__contest {
+        width: 15rem;
+        margin: 0 1rem;
+      }
+    }
+    .table_offline {
+      margin-top: 1rem;
+      .rc-table-header {
+        table {
+          width: 100%;
+
+          thead {
+            tr {
+              th {
+                background-color: #277dff;
+                padding-top: 0.5rem 0;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+                &:first-child {
+                  border-top-left-radius: 10px;
+                  border-bottom-left-radius: 10px;
+                }
+                &:last-child {
+                  border-top-right-radius: 10px;
+                  border-bottom-right-radius: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .rc-table-body {
+        table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0 0.5rem;
+          td {
+            background-color: #f3f3f3;
+            padding: 0.5rem 0;
+            text-align: center;
+            margin-bottom: 1rem;
+            &:first-child {
+              border-top-left-radius: 10px;
+              border-bottom-left-radius: 10px;
+            }
+            &:last-child {
+              border-top-right-radius: 10px;
+              border-bottom-right-radius: 10px;
+            }
+          }
+          tr:hover {
+            td {
+              background-color: #9bc3ff;
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import './components/CourseGeneralInfo/styles.scss';
+@import './components/TabDocument/styles.scss';
+@import './components/TabGeneral/styles.scss';
+@import './components/TabLesson/styles.scss';
+@import './components/TabNote/styles.scss';
+@import './components/TabQA/styles.scss';
+
+.courses__page--detail {
+  padding-top: 30px;
+  padding-bottom: 5rem;
+  // padding-left: 1rem;
+  // padding-right: 1rem;
+  width: 95%;
+  // margin: auto;
+  // overflow-x: hidden;
+  // @media screen and (max-width: 1300px) {
+  //   width: 60rem;
+  // }
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    z-index: 1000;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav__container {
+    .btn__options {
+      // width: 100%;
+      height: 100%;
+      border-radius: 6px !important;
+      padding: 0.5rem;
+
+      font-size: 0.75rem;
+      font-weight: bold;
+      line-height: 17px;
+      font-variant: small-caps;
+      min-width: 8rem;
+      width: 19%;
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+    }
+  }
+}
+
+.container-popup {
+  .icon-style {
+    border: none;
+    top: -80px;
+    img {
+      width: 190px;
+      height: 190px;
+    }
+  }
+
+  .title-popup {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .swal2-html-container {
+    font-style: normal;
+    font-size: 24px;
+    line-height: 42px;
+    margin: 0.2em 1.6em 0.2em;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  .swal2-confirm {
+    background: #0066ff !important;
+    box-shadow: 0px 2px 0px #0057da, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    font-weight: 700;
+    // width: 120px;
+    height: 40px;
+    padding: 0;
+  }
+}
+
+.content_course {
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+}

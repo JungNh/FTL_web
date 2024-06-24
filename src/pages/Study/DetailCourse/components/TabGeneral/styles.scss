@@ -1,0 +1,58 @@
+.tab__general {
+  max-height: 70vh;
+  overflow: auto;
+  padding-right: 1rem;
+  .text__title {
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #4f4f4f;
+  }
+  .text__info {
+    font-size: 0.75rem;
+    text-align: justify;
+    color: #4f4f4f;
+  }
+  .part__title {
+    font-size: 0.875rem;
+    color: #4f4f4f;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    &.not__active {
+      color: #bdbdbd;
+    }
+  }
+  .part__list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+    &.not__active {
+      li {
+        color: #bdbdbd;
+      }
+    }
+    li {
+      font-size: 0.75rem;
+      color: #4f4f4f;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      .lesson__index {
+        color: #bdbdbd;
+        margin-right: 1rem;
+      }
+      .good {
+        color: #04bc8a;
+      }
+      .greate {
+        color: #ffb800;
+      }
+      .not__yet {
+        color: #bdbdbd;
+      }
+      .not__done {
+        color: #bdbdbd;
+      }
+    }
+  }
+}

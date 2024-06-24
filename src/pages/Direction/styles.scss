@@ -1,0 +1,60 @@
+@import './components/Age/styles.scss';
+@import './components/Language/styles.scss';
+@import './components/LearnPurpose/styles.scss';
+@import './components/TargetDaily/styles.scss';
+@import './components/Level/styles.scss';
+
+.direction__page {
+  position: relative;
+  // width: 100vw;
+  min-height: 100vh;
+
+  .section--subTitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #4f4f4f;
+    text-align: center;
+  }
+  .section--title {
+    margin-bottom: 1.75rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #0066ff;
+    text-align: center;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 2rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+  .progress__container {
+    position: absolute;
+    bottom: 0;
+    width: 95vw;
+    left: 2.5vw;
+    background: #282830;
+    border-radius: 0.75rem 0.75rem 0px 0px;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .progess__line {
+      width: 90%;
+      height: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .continue__btn {
+      position: absolute;
+      bottom: 1.25rem;
+      width: 150px;
+    }
+  }
+}

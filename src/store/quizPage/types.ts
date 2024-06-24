@@ -1,0 +1,4 @@
+export enum Types {
+    SET_QUESTION_STATE = "SET_QUESTION_STATE",
+    SET_SUBMIT_STATE = "SET_SUBMIT_STATE",
+}

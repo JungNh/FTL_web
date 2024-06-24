@@ -1,0 +1,542 @@
+.fish__game {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  user-select: none;
+
+  .btn__time {
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn__time {
+    left: 9rem;
+  }
+
+  .showTimer {
+    left: 22.5rem !important;
+  }
+
+  .label_time {
+    position: absolute;
+    top: 3rem;
+    left: 15rem;
+    font-family: 'Mali';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 69px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .heart_ico {
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    display: flex;
+  }
+
+  .game__background {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+
+  .game-button {
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateY(3px) !important;
+    }
+    &.disapper {
+      opacity: 1;
+    }
+  }
+  .container-game {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    .game__background--welcome {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+
+    .header__wrapper {
+      position: absolute;
+      top: 50px;
+      padding: 0 50px;
+      display: flex;
+      justify-content: space-between;
+      width: 100vw;
+      .header-game {
+        display: flex;
+        z-index: 10;
+        align-items: center;
+        .heart-icon {
+          width: 4.5rem;
+          height: 4.5rem;
+          object-fit: contain;
+        }
+      }
+      .font-text {
+        font-family: 'Mali', cursive;
+        font-size: 60px;
+        color: white;
+        line-height: 75.4px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-left: 2.5rem;
+        user-select: none;
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 10px;
+        right: 270px;
+        @media screen and (max-width: 1300px) {
+          font-size: 32px;
+          margin-bottom: 0;
+        }
+        &.summary__score {
+          position: absolute;
+          left: 15%;
+        }
+      }
+      .game-logo {
+        object-fit: contain;
+      }
+    }
+
+    .results__container {
+      position: absolute;
+      width: 90%;
+      height: 77vh;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        180deg,
+        rgba(134, 184, 223, 0.2) 0%,
+        rgba(10, 102, 175, 0.2) 100%
+      );
+      border: 8px solid #103a61;
+      box-sizing: border-box;
+      border-radius: 40px;
+      display: grid;
+      // padding: 1rem;
+      grid-template-areas:
+        '1fr 1fr 1fr 1fr 1fr'
+        '1fr 1fr 1fr 1fr 1fr';
+      align-items: center;
+      row-gap: 1rem;
+      padding: 3rem 2rem;
+      .box-summary-fish {
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        transition: 0.5s transform ease;
+        width: 200px;
+        @media screen and (max-width: 1300px) {
+          width: 150px;
+        }
+        .box__border {
+          object-fit: contain;
+          width: 100%;
+        }
+        &.popup {
+          transform: scale(1.1);
+        }
+
+        .text-box-summary {
+          position: absolute;
+          font-family: 'Mali', cursive;
+          font-size: 18px;
+          color: white;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          text-align: center;
+          padding: 1rem;
+          .image-box-summary {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            object-fit: contain;
+            @media screen and (max-width: 1300px) {
+              width: 100px;
+              height: 100px;
+            }
+          }
+          p {
+            position: absolute;
+            top: calc(5% + 155px);
+            left: 2.5%;
+            width: 95%;
+            font-family: 'Mali', cursive;
+            color: white;
+            text-align: center;
+            @media screen and (max-width: 1300px) {
+              top: calc(5% + 105px);
+              font-size: 18px;
+            }
+          }
+        }
+
+        .correct__box {
+          width: 200px;
+        }
+      }
+    }
+    .shark__animation {
+      position: absolute;
+      top: 0%;
+      left: 100%;
+      opacity: 0;
+      .shark__hungry1 {
+        position: absolute;
+        height: 300px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .game-answer {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+    p.disapper {
+      opacity: 0;
+    }
+  }
+
+  .back-button {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .start-button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: goUp infinite linear 2s;
+    cursor: pointer;
+    .btn__play--text {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+    img {
+      width: 250px;
+    }
+    @keyframes goUp {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+  .chat-game {
+    position: absolute;
+    top: 70%;
+    margin-left: 50px;
+  }
+  .container-chat-game {
+    width: 100%;
+  }
+  .chat-text-game {
+    position: absolute;
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 10px;
+  }
+  .left-chat-game {
+    position: relative;
+    width: 400px;
+  }
+  .sound-game-fish {
+    position: absolute;
+    top: 80%;
+    right: 50px;
+  }
+
+  .correct-answer {
+    margin-left: 50px;
+    margin-top: -100px;
+  }
+
+  .incorrect-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000065;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+  }
+  .icon-incorrect-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .answer-animation {
+    transition: all 0.2s ease-in-out;
+    &.disapper {
+      opacity: 0;
+    }
+  }
+  .can-hover:hover {
+    transform: scale(1.2);
+  }
+
+  .container-correct-game-fish {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    .result-game {
+      position: relative;
+      width: 400px;
+
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 24px;
+        line-height: 60px;
+        overflow: hidden;
+        max-height: 140px;
+        color: white;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .result-image-game {
+        position: absolute;
+        height: 200px;
+        width: 350px;
+        object-fit: contain;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  }
+
+  .sound-result-game {
+    position: absolute;
+    top: 60%;
+    left: 50px;
+  }
+  .container-point-game-fish {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    @media screen and (max-width: 1300px) {
+      right: 5%;
+    }
+    .result-game {
+      position: relative;
+      width: 400px;
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        p {
+          margin-bottom: 0;
+          margin-top: 16px;
+        }
+        .text-exp {
+          font-size: 50px;
+          line-height: 40px;
+          margin: 0;
+        }
+      }
+    }
+    .continue-game {
+      position: relative;
+      width: 170px;
+      margin: auto;
+      margin-top: 20px;
+      .result-game {
+        width: 100%;
+      }
+      .btn__continue--text {
+        position: absolute;
+        bottom: 2%;
+        z-index: 1;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      .continue-game {
+        width: calc(100% + 50px);
+        margin-top: 0px;
+        margin-left: -25px;
+      }
+    }
+  }
+
+  .summary-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 8vh;
+    z-index: 1;
+  }
+
+  .table-summary-fish {
+    position: absolute;
+    left: 50%;
+    height: fit-content;
+    transform: translate(-50%);
+    top: calc(8vh + 60px);
+    width: 100%;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+  .box-finish-summary {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1300px) {
+      img {
+        width: 80px;
+      }
+    }
+    .icon_wrong {
+      width: 47px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .again-game-fish {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    width: 170px;
+    margin: auto;
+    margin-top: 20px;
+    .btn__continue--text {
+      position: absolute;
+      bottom: 2%;
+      z-index: 1;
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+    .result-game {
+      width: 100%;
+    }
+    .continue-game {
+      width: calc(100% + 50px);
+      margin-left: -25px;
+      // margin-left: -50px;
+      margin-top: 0px;
+    }
+  }
+  .container-again {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    .again-container-text {
+      position: relative;
+
+      width: 400px;
+      margin: auto;
+      margin-top: 20px;
+      .again-text {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+.user-drag--none {
+  -webkit-user-drag: none;
+}
+.user-select--none {
+  user-select: none;
+}

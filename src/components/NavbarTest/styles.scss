@@ -1,0 +1,84 @@
+.navbarTest__components {
+  position: fixed;
+  bottom: 0;
+  width: 95vw;
+  left: 2.5vw;
+  background: #282830;
+  border-radius: 0.75rem 0.75rem 0px 0px;
+  height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+
+  .progess__line {
+    width: 95%;
+    height: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .continue__btn {
+    position: absolute;
+    bottom: 2rem;
+    width: 25rem;
+  }
+  .continue__btn:disabled {
+    background-color: #e5e5e5;
+    color: #282830;
+    border-color: #e5e5e5;
+    opacity: 1;
+  }
+  .progess__text {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 2.5%;
+    font-weight: bold;
+    font-size: 0.75rem;
+    font-variant: small-caps;
+    color: #ffffff;
+  }
+
+  .progess__btn-functional {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2.5%;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+
+    .img__functional--holder {
+      border-radius: 1.5rem;
+      background: #e0e0e0;
+      color: #282830;
+      border: none;
+      padding: 0 !important;
+      width: fit-content;
+      margin-right: 1rem;
+      .img__functional {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #e0e0e0;
+        border-radius: 50%;
+        padding: 0.125rem !important;
+        cursor: pointer;
+        &:hover {
+          background: #eeeeee;
+        }
+      }
+    }
+
+    .btn__functional {
+      margin: 0;
+      border-radius: 1.5rem;
+      background: #e0e0e0;
+      color: #282830;
+      line-height: 17px;
+      font-size: 12px;
+      border: none;
+      &:hover,
+      &:focus,
+      &:active {
+        background: #eeeeee;
+      }
+    }
+  }
+}

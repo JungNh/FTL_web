@@ -1,0 +1,20 @@
+.input__textarea__component {
+  background: #eeeeee !important;
+  border-color: #eeeeee !important;
+  border-radius: 6px !important;
+  line-height: 2rem !important;
+  text-align: center;
+  &::placeholder {
+    color: #bdbdbd !important;
+  }
+  &.has__error {
+    border-color: red !important;
+    &:focus {
+      box-shadow: 0 0 0 0.2rem #ff000021;
+    }
+  }
+
+  &.resize-none {
+    resize: none;
+  }
+}

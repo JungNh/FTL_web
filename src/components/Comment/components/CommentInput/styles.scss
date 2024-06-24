@@ -1,0 +1,38 @@
+.comment__component--input {
+  .avata__holder {
+    width: 2rem;
+    border: 1px solid #bdbdbd;
+    object-fit: contain;
+    margin-right: 1rem;
+    &.small__avata {
+      width: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .host__text {
+    font-size: 0.5625rem;
+    color: #bdbdbd;
+    line-height: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .host__input--container {
+    display: flex;
+    .comment__input-custom {
+      height: 1.5rem;
+      border-radius: 1.5rem !important;
+      flex: 1;
+
+      background: #eeeeee !important;
+      border: 1px solid #eeeeee !important;
+      font-size: 0.75rem;
+      padding: 0 0.5rem;
+      &::placeholder {
+        color: #bdbdbd !important;
+      }
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+}

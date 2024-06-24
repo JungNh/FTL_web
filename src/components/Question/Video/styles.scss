@@ -1,0 +1,147 @@
+.lession__video {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  .part__title--wrapper{
+    padding: 0;
+  }
+  .lession__title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #0066ff;
+  }
+  .parent__player {
+    width: 42.875rem;
+    height: 80vh;
+  }
+  .player__wrapper {
+    position: relative;
+    width: 42.875rem;
+    overflow: auto;
+    margin: 0px 0px 48px 0px;
+    > div {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: auto;
+    }
+  }
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .continue__btn {
+    position: fixed;
+    width: 20.75rem;
+    bottom: 1rem;
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+
+  .ico__menu {
+    position: absolute;
+    left: 4rem;
+    top: 40vh;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &.collapsed {
+      transform: translateX(-200px);
+    }
+  }
+
+  .sideBar {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 20rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    padding-top: 7rem;
+    &.collapsed {
+      transform: translateX(-100%);
+    }
+    .menu__close {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      color: #1d84ff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .menu__back {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #1d84ff;
+      font-size: 0.875rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .text__process {
+      font-weight: bold;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #bdbdbd;
+      margin-bottom: 0;
+    }
+    .text__process--percent {
+      font-weight: bold;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #ffb800;
+      margin-bottom: 0;
+    }
+    .progess__line {
+      height: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .part__title {
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+    .lesson__title,
+    .lesson__des {
+      font-size: 0.875rem;
+    }
+  }
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+  .active {
+    color: white;
+  }
+  .single__item {
+    background-color: whitesmoke;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.custor {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.list__lesson {
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: unset;
+}

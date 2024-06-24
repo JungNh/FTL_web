@@ -1,0 +1,19 @@
+.tab__component {
+  display: flex;
+  gap: 3.75rem;
+  justify-content: center;
+  margin: 0.9375rem 0;
+  div {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    color: #4f4f4f;
+    padding: 0.3125rem 0.75rem;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  .active {
+    background: #0079e9;
+    color: #ffffff;
+  }
+}

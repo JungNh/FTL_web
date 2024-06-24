@@ -1,0 +1,230 @@
+.lession__backTalkVideo {
+  .title__lession {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0066ff;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main__question {
+    width: 1200px;
+    margin: auto;
+    @media screen and (max-width: 1300px) {
+      width: 60rem;
+    }
+    .message_left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      .message_container {
+        min-width: 300px;
+        position: relative;
+        padding: 1rem;
+        background: #e9eaec;
+        border-radius: 5px;
+        margin-left: 1rem;
+        &::before {
+          position: absolute;
+          margin-left: -1rem;
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 1rem solid transparent;
+          border-right: 1rem solid transparent;
+          border-bottom: 1rem solid #e9eaec;
+          top: 0.3rem;
+          left: 0;
+        }
+      }
+    }
+    .message_right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      .message_container {
+        min-width: 300px;
+        position: relative;
+        padding: 1rem;
+        background: #e9eaec;
+        border-radius: 5px;
+        margin-right: 1rem;
+        &::before {
+          position: absolute;
+          margin-right: -1rem;
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 1rem solid transparent;
+          border-right: 1rem solid transparent;
+          border-bottom: 1rem solid #e9eaec;
+          top: 0.3rem;
+          right: 0;
+        }
+        .progress__wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .progress__bar {
+            flex: 1;
+            height: 6px;
+            background-color: #cccccc;
+            .bg-success {
+              background-color: #04bc8a !important;
+            }
+          }
+          .progress__percent {
+            margin-bottom: 0;
+            margin-left: 16px;
+          }
+        }
+        .loading__icon {
+          width: 10px;
+          height: 10px;
+          margin: 5px;
+        }
+      }
+      .recording {
+        background: #c6e5ff;
+
+        &::before {
+          border-bottom: 1rem solid #c6e5ff;
+        }
+        .main__image--container {
+          margin: auto;
+          background: #0066ff;
+          border-radius: 11rem;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3rem;
+          height: 3rem;
+          &.isRecording {
+            background: #62a72d;
+            box-shadow: 0px 2px 0px #62a72d, 0px 3px 3px rgba(0, 0, 0, 0.5);
+          }
+          .main__image {
+            border-radius: 3rem;
+            width: 2rem;
+            height: 2rem;
+            z-index: 2;
+          }
+          .recording__wav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .path {
+              width: 0.5rem;
+              height: 0.5rem;
+              background-color: white;
+              border-radius: 0.5rem;
+              margin: 0 2px;
+            }
+            .path_1 {
+              animation: 1.5s soundWav1 infinite ease;
+            }
+            .path_2 {
+              animation: 1.5s soundWav2 infinite ease;
+            }
+            .path_3 {
+              animation: 1.5s soundWav3 infinite ease;
+            }
+          }
+
+          @keyframes soundWav1 {
+            0% {
+              height: 1rem;
+            }
+            25% {
+              height: 2rem;
+            }
+            50% {
+              height: 1rem;
+            }
+            75% {
+              height: 1rem;
+            }
+            100% {
+              height: 1rem;
+            }
+          }
+          @keyframes soundWav2 {
+            0% {
+              height: 1rem;
+            }
+            25% {
+              height: 1rem;
+            }
+            50% {
+              height: 2rem;
+            }
+            75% {
+              height: 1rem;
+            }
+            100% {
+              height: 1rem;
+            }
+          }
+          @keyframes soundWav3 {
+            0% {
+              height: 1rem;
+            }
+            25% {
+              height: 1rem;
+            }
+            50% {
+              height: 1rem;
+            }
+            75% {
+              height: 2rem;
+            }
+            100% {
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .video_player {
+      width: 100% !important;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .conversation__container {
+      max-height: 60vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      .avatar {
+        width: 54px;
+        height: 54px;
+        border-radius: 54px;
+      }
+    }
+  }
+
+  .btn__next {
+    width: 20rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+  }
+  .number_question{
+    padding-left: 5rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+}

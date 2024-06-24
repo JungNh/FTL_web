@@ -1,0 +1,116 @@
+.arenabanner__component {
+  .content__banner {
+    width: 100%;
+    border-radius: 12px;
+    height: 3rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .content__banner-background {
+      object-fit: cover;
+      width: 100%;
+    }
+    .content__banner-date {
+      z-index: 99;
+      background: #ff7a00;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 12px 0px;
+      position: absolute;
+      padding: 8px 15px;
+      left: 0;
+      top: 0;
+      span {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        color: #fff;
+      }
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+      }
+    }
+    .content__banner-timer {
+      z-index: 99;
+      background: #ff7a00;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 0px 12px;
+      position: absolute;
+      padding: 8px 15px;
+      right: 0;
+      top: 0;
+      span {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        color: #fff;
+      }
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+      }
+    }
+    .content__banner-content {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      img {
+        height: 85px;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #ed1c24;
+        margin: 10px 0px;
+        text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff,
+          -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+      }
+      .content__badge-wrapper {
+        padding: 3px;
+        background: #ffffff;
+        clip-path: polygon(5% 5%, 95% 5%, 100% 50%, 95% 95%, 5% 95%, 0% 50%);
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        div {
+          padding: 5px 36px;
+          background: #ff7a00;
+          clip-path: polygon(5% 5%, 95% 5%, 99.5% 50%, 95% 95%, 5% 95%, 0.5% 50%);
+          color: #ffffff;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+      .content__gift-wrapper {
+        display: flex;
+        gap: 50px;
+        margin-top: 30px;
+        img {
+          height: 50px;
+        }
+      }
+    }
+  }
+  .content__dots {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0px;
+    justify-content: center;
+    div {
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background: #dedede;
+      cursor: pointer;
+    }
+    .active {
+      background: #3f8cff !important;
+    }
+  }
+}

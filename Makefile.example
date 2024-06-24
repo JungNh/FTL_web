@@ -1,0 +1,35 @@
+REGISTRY := git.hisoft.com.vn:5050
+NAME   := ${REGISTRY}/example/core-api
+TAG    := $$(git log -1 --pretty=%h)
+LATEST := ${NAME}:latest
+
+
+.PHONY: build push run stop clean
+
+build:
+	echo ${TAG}
+	docker build -t ${NAME}:${TAG} .
+	docker tag ${NAME}:${TAG} ${LATEST}
+
+push:
+	docker login ${REGISTRY}
+	docker push ${NAME}:${TAG}
+	docker push ${LATEST}
+
+run:
+	docker run \
+		-p 3000:3000 \
+		--mount type=bind,src=${PWD}/,target=/react-front/ \
+		-e PORT=80 \
+		-e CLIENT_ENDPOINT=http://example.2soft.top \
+		-e API_ENDPOINT=http://localhost:8080 \
+		-v /react-front/node_modules \
+		${NAME}:${TAG} start:dev
+	make clean
+
+stop: 
+	docker ps -a |  grep "${NAME}" | awk '{print $1}' | xargs docker stop
+	make clean
+
+clean:
+	rm -rf dist/

@@ -1,0 +1,24 @@
+.react-draggable {
+  width: 100px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+
+  .assistive__touch_close {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+.call__hotline, .call__hotline:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.close-fubo-support {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  cursor: pointer;
+}

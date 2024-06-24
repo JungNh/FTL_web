@@ -1,0 +1,6 @@
+export enum ContestType {
+  HAPPENNING = 'HAPPENNING',
+  UPCOMING = 'UPCOMING',
+  HAPPENED = 'HAPPENED',
+  NEWS = 'NEWS'
+}

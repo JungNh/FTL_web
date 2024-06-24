@@ -1,0 +1,67 @@
+.bg-active-card {
+  position: relative;
+  background-image: url('../../assets/images/colorfulBackground.jpeg');
+  // min-height: 100vh;
+  background-size: cover;
+  .button__back {
+    display: flex;
+    position: fixed;
+    top: 4rem;
+    left: 2rem;
+    z-index: 1;
+    border-radius: 0.75rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .userSetting_panel-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 19rem;
+    height: 100vh;
+    background: #0066ff;
+    color: #ffffff;
+    padding: 4rem 1rem 0 4rem;
+    font-size: 0.75rem;
+    @media screen and (max-width: 1300px) {
+      width: 15rem;
+    }
+
+    .item-main {
+      padding: 0.5rem 0 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      &.can-hover {
+        cursor: pointer;
+        &:hover,
+        &.active {
+          background: linear-gradient(90deg, #0066ff 0%, #2e81ff 100%);
+        }
+      }
+    }
+    .item-sub {
+      padding: 0.3rem 0 0.3rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        background: linear-gradient(90deg, #0066ff 0%, #2e81ff 100%);
+      }
+    }
+  }
+  .userSetting_panel-right {
+    padding-left: 19rem;
+    // width: 98vw;
+    // min-width: 40rem;
+    @media screen and (max-width: 1300px) {
+      padding-left: 40px;
+    }
+  }
+  .divider_horizontal-white {
+    border-bottom: 0.5px solid #eeeeee;
+  }
+  .tab__wrap {
+    min-width: 20rem;
+    max-width: 50rem;
+  }
+}

@@ -1,0 +1,57 @@
+export type ImageResourcesType = {
+  bg: string
+  btn: string
+  btn_answer: string
+  btn_answer_selected: string
+  btn_back: string
+  btn_confirm: string
+  btn_confirm_disable: string
+  btn_null: string
+  btn_sound_off: string
+  btn_sound_on: string
+  btn_summary: string
+  game_name: string
+  ico_board_correct: string
+  ico_board_correct_text: string
+  ico_board_question: string
+  ico_board_summary: string
+  ico_board_text: string
+  ico_game_score: string
+  ico_heart_empty: string
+  ico_heart_full: string
+  ico_pokeball: string
+  ico_pokeball_big: string
+  ico_pokeball_open: string
+  ico_pokemon_1: string
+  ico_pokemon_2: string
+  ico_pokemon_3: string
+  ico_pokemon_4: string
+  ico_pokemon_5: string
+  ico_pokemon_6: string
+  ico_pokemon_7: string
+  ico_pokemon_8: string
+  ico_pokemon_9: string
+  ico_pokemon_10: string
+  ico_pokemon_11: string
+  ico_pokemon_12: string
+  ico_pokemon_13: string
+  ico_pokemon_14: string
+  ico_pokemon_15: string
+  ico_pokemon_16: string
+  ico_pokemon_17: string
+  ico_pokemon_18: string
+  ico_result_correct: string
+  ico_result_wrong: string
+  ico_robo_blur: string
+  ico_robo_happy: string
+  ico_robo_sad: string
+  ico_sound: string
+  logo: string
+}
+export type AudioResourcesType = {
+  sound_correct: string
+  sound_open: string
+  sound_wrong: string
+  theme: string
+  theme_summary: string
+}

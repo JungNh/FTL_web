@@ -1,0 +1,38 @@
+.dictionary__modal {
+  .modal-header {
+    border-bottom: none;
+    .modal__header--title {
+      flex-grow: 1;
+      color: #0066ff;
+      text-align: center;
+      border: none;
+    }
+  }
+  .modal-content {
+    border-radius: 2rem;
+
+    .nav__container {
+      .btn__options {
+        height: 100%;
+        min-width: 5rem;
+        border-radius: 6px !important;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+
+        font-size: 0.5625rem;
+        font-weight: bold;
+        &:focus,
+        &:active {
+          outline: none !important;
+        }
+      }
+    }
+  }
+  .tab_EngViet,
+  .tab_EngEng {
+    .title {
+      color: #0066ff;
+      font-weight: bold;
+    }
+  }
+}

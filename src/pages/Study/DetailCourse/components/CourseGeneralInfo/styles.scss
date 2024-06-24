@@ -1,0 +1,173 @@
+.course__general--info {
+  // position: fixed;
+  top: 4rem;
+  width: 22rem;
+  // height: calc(100vh - 8rem);
+  overflow-y: auto;
+  padding: 0 0.5rem;
+  @media screen and (max-width: 1300px) {
+    width: 19rem;
+  }
+  .logo__container {
+    position: sticky;
+    top: 0;
+    border-radius: 0.75rem;
+    height: 20rem;
+    padding: 1rem;
+    position: relative;
+    transition: 0.3s all ease;
+    border: 1px solid #efefef;
+    background-position: center !important;
+    @media screen and (max-width: 1300px) {
+      height: 16rem;
+    }
+    .overlay {
+      transition: 0.3s all ease;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.75rem;
+      background: #00000085;
+      opacity: 0;
+      z-index: 0;
+    }
+    .logo__title {
+      top: 1rem;
+      left: 1rem;
+      width: calc(100% - 2rem);
+      display: flex;
+      justify-content: space-between;
+      transition: 0.3s all ease;
+      position: absolute;
+      opacity: 0;
+      z-index: 1;
+      .logo__title--time {
+        font-weight: bolder;
+        font-size: 1.5rem;
+        line-height: 34px;
+        color: #ffffff;
+      }
+      .logo__title--text {
+        color: #ffb800;
+        font-weight: bolder;
+      }
+    }
+    .logo__subtitle {
+      top: 4rem;
+      left: 1rem;
+      width: calc(100% - 2rem);
+      font-weight: bolder;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #a2a2a2;
+      color: #ffffff;
+      transition: 0.3s all ease;
+      position: absolute;
+      opacity: 0;
+      z-index: 1;
+    }
+    .logo__title,
+    .logo__subtitle {
+      transition: 0.3s all ease;
+      position: absolute;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+        0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+      .overlay {
+        opacity: 1;
+      }
+
+      .logo__subtitle,
+      .logo__title {
+        opacity: 1;
+      }
+    }
+  }
+
+  .leaderboard {
+    position: sticky;
+    top: 0;
+    border-radius: 0.75rem;
+    height: 80px;
+    position: relative;
+    background-position: center !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+  }
+
+  .course__status {
+    color: #0066ff;
+    font-size: 0, 75rem;
+  }
+
+  .course__name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 34px;
+    color: #4f4f4f;
+  }
+
+  .tag__container {
+    display: flex;
+    flex-wrap: wrap;
+    .course__tag {
+      background: linear-gradient(
+        266.3deg,
+        #f19b45 0%,
+        #ee942c 33.33%,
+        #eeb450 52.08%,
+        #ee991c 86.46%
+      );
+      box-shadow: 0px 1px 0px #ff7a00, 0px 4px 12px rgba(0, 0, 0, 0.24),
+        0px 2.32px 4.81372px rgba(0, 0, 0, 0.221228), 0px 1.07px 1.24973px rgba(0, 0, 0, 0.178429);
+      border-radius: 0.75rem;
+
+      font-size: 0.875rem;
+      color: #ffffff;
+      padding: 0.1rem 0.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .course__note {
+    font-size: 0.75rem;
+    color: #bdbdbd;
+    overflow: hidden;
+  }
+
+  .course__progress {
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #bdbdbd;
+    .yellow__color {
+      color: #ffb800;
+    }
+    .progess__line {
+      height: 0.5rem;
+    }
+  }
+}
+
+.card-code {
+  background: #2e81ff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background: #2a76e7;
+  }
+}

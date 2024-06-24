@@ -1,0 +1,212 @@
+.lession__multiple__choice {
+  .subTitle__lession {
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #4f4f4f;
+    max-width: 80vw;
+    margin: auto;
+  }
+
+  .title__lession {
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0066ff;
+    max-width: 80vw;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main__question {
+    display: flex;
+    justify-content: center;
+
+    .main__image--container {
+      position: relative;
+      background: #0066ff;
+      border-radius: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 2px 0px #0056d6, 0px 3px 3px rgba(0, 0, 0, 0.5);
+      width: 11rem;
+      height: 11rem;
+
+      .main__image {
+        // background: #000;
+        border-radius: 11rem;
+        width: 11rem;
+        height: 11rem;
+        padding: 3rem;
+      }
+
+      .effect__sound {
+        position: absolute;
+        z-index: -1;
+        width: 15rem;
+        height: 15rem;
+        color: #b7d4ff;
+        animation: 1.5s linear infinite activeSound;
+      }
+
+      .snail-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: #ffb800;
+        border-color: #ffb800;
+        border-radius: 200px;
+        box-shadow: none;
+        transition: all ease 0.3s;
+        filter: drop-shadow(0px 2px 0px #ff9900), drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
+
+        &:hover,
+        &:active {
+          background-color: #cfad58;
+          box-shadow: none;
+        }
+
+        &:focus {
+          background-color: #ffb800;
+          border-color: #ffb800;
+        }
+
+        &.fast__snail {
+          background-color: green;
+          border-color: green;
+        }
+      }
+    }
+  }
+
+  .answers__section {
+    width: 30rem;
+    margin: auto;
+
+    .progress__time {
+      height: 6px;
+
+      .bg-success {
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .audioPlayer_custom {
+    padding-left: 0;
+    padding-right: 0;
+
+    .rhap_progress-section {
+      .rhap_progress-container {
+        margin: 0;
+
+        .rhap_progress-bar {
+          height: 0.5rem;
+          border-radius: 0.5rem;
+
+          .rhap_progress-indicator {
+            display: none;
+          }
+
+          .rhap_progress-filled {
+            background-color: #04bc8a;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg_number_correct {
+  position: fixed;
+  right: 5rem;
+  top: 4rem;
+
+  .img_start_cheer {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .img_light_short {
+    width: 6.5rem;
+    height: 6.5rem;
+    position: absolute;
+    top: -20px;
+    z-index: -2;
+    right: -20px;
+    animation: roomsacle 3s infinite;
+  }
+
+  @keyframes roomsacle {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .img_light_long {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: -13px;
+    z-index: -2;
+    right: -16px;
+    animation: roomsacle 3s infinite;
+  }
+
+  .number_cheer_text {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #734D00;
+    font-weight: 500;
+  }
+
+  .continuous_text {
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.number_correct_cheering {
+  position: fixed;
+  right: 3rem;
+  top: 1rem;
+}
+
+@keyframes activeSound {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 100;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

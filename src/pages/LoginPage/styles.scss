@@ -1,0 +1,200 @@
+.login__page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #0066ff 0%, #2e81ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s ease;
+
+  .login__page--panel {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+    width: 400px;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24), 0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228),
+      0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429);
+    border-radius: 12px;
+    overflow: hidden;
+
+    &.hidden_height {
+      display: none;
+    }
+
+    // Text
+    .login__title {
+      font-weight: bold;
+      font-size: 2.25rem;
+      color: #4f4f4f;
+    }
+    .login__subtitle {
+      font-weight: bold;
+      font-size: 0.875rem;
+      color: #4f4f4f;
+    }
+    .login__link {
+      color: #0066ff;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .rule__text--container {
+      font-size: 0.875rem;
+      color: #bdbdbd;
+      .rule__text {
+        color: #ea6262;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    .label__form {
+      font-weight: bold;
+      font-size: 0.75rem;
+      color: #bdbdbd;
+    }
+    .user__group {
+      background: #eeeeee;
+      border: 1px solid #eeeeee;
+      border-radius: 0.875rem;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      .avata__holder {
+        width: 3rem;
+        height: 3rem;
+        filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.24)),
+          drop-shadow(0px 0.323602px 4.81372px rgba(0, 0, 0, 0.221228)),
+          drop-shadow(0px 0.068794px 1.24973px rgba(0, 0, 0, 0.178429));
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+
+        .avata__image {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .user__name {
+        font-weight: bold;
+        color: #4f4f4f;
+        max-width: 330px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .login__button {
+      font-size: 0.75rem;
+      width: fit-content;
+      margin-left: auto;
+    }
+    .button__facebook {
+      background: #395185;
+      border-radius: 6px;
+    }
+    
+  }
+  
+       // Di động (chiều dọc)
+    @media only screen and (max-width: 320px) {
+      .login__page--panel {
+        width: 320px !important;
+      }
+    }
+  
+    // Di động (chiều ngang)
+    @media only screen and (max-width: 480px) {
+      .login__page--panel {
+        width: 320px !important;
+      }
+    }
+  
+    @media only screen and (max-width: 600px) {
+      .login__page--panel {
+        width: 320px !important;
+      }
+    }
+  
+    @media only screen and (max-width: 800px) {
+      .login__page--panel {
+        width: 320px !important;
+      }
+    }
+  
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .login__page--panel {
+        width: 520px !important;
+      }
+    }
+  .button__google {
+    background: #ffffff;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 6px;
+    color: #4f4f4f;
+    &:active {
+      background: #f2f2f2 !important;
+      border: 0.5px solid #e0e0e0 !important;
+      color: #4f4f4f !important;
+    }
+    &:hover,
+    &:focus {
+      background: #f4f4f4 !important;
+      border: 0.5px solid #e0e0e0 !important;
+      color: #4f4f4f !important;
+    }
+  }
+  .sub__text {
+    font-size: 0.5625rem;
+    text-align: justify;
+    color: #bdbdbd;
+  }
+
+  .version__no {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    color: white;
+    font-size: 12px;
+  }
+
+  .auto__update {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    .version__info {
+      width: 100%;
+      // left: 50%;
+      // transform: translateX(-50%);
+      color: white;
+      font-size: 12px;
+    }
+    .progress__update {
+      width: 90%;
+      height: 50px;
+      box-shadow: 0 0 8px 2px white;
+    }
+  }
+  .test_secret {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    button {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.panelLeft {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 19rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: white;
+  padding: 2rem 1rem 0 2rem;
+  font-size: 0.75rem;
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+
+  box-shadow: 0px 4px 12px #65bbed3d, 0px 0.3236px 4.81372px rgba(115, 158, 245, 0.221),
+    0px 0.06879px 1.24973px rgba(116, 158, 248, 0.178);
+  .ic_logo {
+    width: 220px;
+    height: 80px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 1300px) {
+      width: 180px;
+    }
+  }
+  .panel_item {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      transform: translate(-2px, -2px) scale(1.04);
+    }
+    &.active {
+      background: linear-gradient(90deg, #9dd3ff 0%, #fff 100%);
+      border-left: 3px solid var(--color-primary);
+      color: #018cff;
+      font-weight: 500;
+    }
+  }
+  .ic_panel {
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  .panel_install {
+    margin-top: 20px;
+    display: flex;
+    background-image: url('../../assets/images/panel_instal.png');
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 190px;
+    @media screen and (max-width: 1300px) {
+      width: 200px;
+      height: 150px;
+    }
+    margin-bottom: 40px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .btn_install {
+    width: 200px;
+    height: 36px;
+    @media screen and (max-width: 1300px) {
+      width: 180px;
+      height: 32px;
+    }
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      transform: translate(-2px, -2px) scale(1.04);
+    }
+  }
+}
+
+.panelLeft_mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  padding-top: 20px;
+  background: white;
+  font-size: 0.75rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  @media screen and (max-width: 1300px) {
+    display: block;
+  }
+  box-shadow: 0px 4px 12px #65bbed3d, 0px 0.3236px 4.81372px rgba(115, 158, 245, 0.221),
+    0px 0.06879px 1.24973px rgba(116, 158, 248, 0.178);
+  .ic_logo {
+    width: 220px;
+    height: 80px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 1300px) {
+      width: 180px;
+    }
+  }
+  .panel_item {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      transform: translate(-2px, -2px) scale(1.04);
+    }
+    &.active {
+      background: linear-gradient(90deg, #9dd3ff 0%, #fff 100%);
+      border-left: 3px solid var(--color-primary);
+      color: #018cff;
+      font-weight: 500;
+    }
+  }
+  .ic_panel {
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  .panel_install {
+    margin-top: 20px;
+    display: flex;
+    background-image: url('../../assets/images/panel_instal.png');
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 190px;
+    @media screen and (max-width: 1300px) {
+      width: 200px;
+      height: 150px;
+    }
+    margin-bottom: 40px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .btn_install {
+    width: 200px;
+    height: 36px;
+    @media screen and (max-width: 1300px) {
+      width: 180px;
+      height: 32px;
+    }
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      transform: translate(-2px, -2px) scale(1.04);
+    }
+  }
+}

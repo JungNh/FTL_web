@@ -1,0 +1,13 @@
+.modal_body_course {
+  align-self: center;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  @media screen and (min-width: 1200px) {
+    padding: 20px;
+    width: 1000px;
+  }
+}
+

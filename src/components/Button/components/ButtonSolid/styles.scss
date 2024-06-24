@@ -1,0 +1,28 @@
+.button__solid {
+  border-radius: 0.375rem;
+  width: 100%;
+  // padding: 1rem;
+  border-radius: 6px;
+
+  &.btn-gray {
+    background: #eeeeee;
+    border-radius: 6px;
+    border-color: #eeeeee;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    min-width: 5rem;
+    color: #4f4f4f;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #4f4f4f;
+      border-color: #eeeeee !important;
+      background: #eeeeee !important;
+      box-shadow: none;
+    }
+    &:disabled {
+      border-color: #efefef;
+      background: #efefef;
+    }
+  }
+}

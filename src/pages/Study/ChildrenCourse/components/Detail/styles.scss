@@ -1,0 +1,90 @@
+.detail__children__lession {
+  background: linear-gradient(
+    179.81deg,
+    #ffc42e -2.78%,
+    #febe2e 12.2%,
+    #fdae2d 31.88%,
+    #fa922b 54.17%,
+    #f66c29 78.4%,
+    #f03c26 103.89%,
+    #ed1c24 119.11%
+  );
+  min-height: 100vh;
+
+  .text__title {
+    color: #0066ff;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 2rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    z-index: 1000;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .detail__children__box {
+    width: 32rem;
+    height: 12rem;
+    background-size: cover;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+    border: 10px solid white;
+    position: relative;
+    cursor: pointer;
+    .detail__title {
+      position: absolute;
+      left: 30px;
+      top: 40px;
+      max-width: 20rem;
+      .detail__title-text {
+        font-family: 'iCielCrocante';
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0066ff;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      }
+    }
+
+    .star__container {
+      position: absolute;
+      top: 0.3rem;
+      left: 50%;
+      width: 7rem;
+      height: 2rem;
+      transform: translateX(-50%);
+      background: #ffffff;
+      border: 1px solid #54bce8;
+      border-radius: 11px;
+    }
+  }
+  .section__collapsed {
+    transition: 0.3s all ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    .child__item {
+      width: 32rem;
+      height: 3rem;
+      background: #feffd1;
+      margin-bottom: 1rem;
+      border-radius: 1.5rem;
+      .child__item--stt {
+        width: 3rem;
+        height: 3rem;
+        background: #04bc8a;
+        border-radius: 1.5rem;
+        text-align: center;
+        padding: 0.75rem;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+}

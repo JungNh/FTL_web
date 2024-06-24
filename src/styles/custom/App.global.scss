@@ -1,0 +1,547 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+body {
+  position: relative;
+  font-family: sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  margin: 0 !important;
+
+  #root {
+    width: 100%;
+    // overflow-x: hidden
+  }
+}
+
+// bootstrap
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~react-alice-carousel/lib/alice-carousel.css';
+@import '~react-h5-audio-player/lib/styles.css';
+@import '~react-circular-progressbar/dist/styles.css';
+@import '~react-datepicker/dist/react-datepicker.css';
+// @import '~react-datepicker/dist/react-datepicker-cssmodules.css';
+// page
+@import '../../components/styles.scss';
+@import '../../pages/Homepage/styles.scss';
+@import '../../pages/LoginPage/styles.scss';
+@import '../../pages/Direction/styles.scss';
+@import '../../pages/UserSetting/styles.scss';
+@import '../../pages/Study/styles.scss';
+@import '../../pages/ProgressPage/styles.scss';
+@import '../../pages/RoomOnline/styles.scss';
+@import '../../pages/RoomOffline/styles.scss';
+@import '../../pages/Game/FishGame/styles.scss';
+@import '../../pages/Game/SpinGame/styles.scss';
+@import '../../pages/Game/GoldGame/styles.scss';
+@import '../../pages/Game/PokemonGame/styles.scss';
+@import '../../pages/Game/TrainGame/styles.scss';
+@import '../../pages/GameResouces/styles.scss';
+@import '../../pages/Cource/styles.scss';
+@import '../../pages/Attendance/styles.scss';
+// @import '../../pages/Courses/styles.scss';
+// @import '../../pages/Discovery/styles.scss';
+// @import '../../pages/Dictionary/styles.scss';
+// @import '../../pages/Lession/styles.scss';
+// @import '../../pages/FixNetworkTutorial/styles.scss';
+
+// New game
+@import '../../pages/Game/BrickGame/styles.scss';
+@import '../../pages/Game/MixAndMatchGame/styles.scss';
+@import '../../pages/Game/BasketballGame/styles.scss';
+@import '../../pages/Game/BridgeGame/styles.scss';
+@import '../../pages/ActiveCard/styles.scss';
+@import '../../pages/UserSetting/ModalUserSetting/style.scss';
+
+.flex-1 {
+  flex: 1;
+}
+
+.divider__horizontal {
+  border-top: 1px solid #bbb;
+  width: 100%;
+}
+
+.errorField {
+  color: red;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.custome__radio {
+  &.correct {
+    .form-check-input[type='radio'] {
+      border-color: #04bc8a;
+    }
+    .form-check-label {
+      color: #04bc8a;
+    }
+  }
+
+  .form-check-input:checked[type='radio'],
+  .form-check-input:checked[type='checkbox'] {
+    background-image: url('../../assets/images/ico_ratio-checked.svg');
+  }
+  .form-check-input:checked {
+    background-color: #04bc8a;
+    border-color: #04bc8a;
+  }
+  &.wrong {
+    .form-check-input:checked[type='radio'],
+    .form-check-input:checked[type='checkbox'] {
+      background-image: url('../../assets/images/ico_ratio-fail.svg') !important;
+      background-color: #ff556d;
+      border-color: #ff556d;
+    }
+    .form-check-label {
+      color: #ff556d;
+    }
+  }
+}
+.btn__confirm {
+  min-width: 9.5rem !important;
+  background-color: #0066ff !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+}
+.btn__cancel--confirm {
+  min-width: 9.5rem !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #8e8e93 !important;
+  border-radius: 12px !important;
+}
+
+/**
+* font-face
+*/
+
+@font-face {
+  font-family: 'pony';
+  src: local('pony'), url('../../assets/fonts/Pony.ttf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'iCielBeCool';
+  src: local('iCielBeCool'), url('../../assets/fonts/iCielBeCool-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'iCielNovecentosans';
+  src: local('iCielNovecentosans'),
+    url('../../assets/fonts/iCielNovecentosans-ExtraLight.otf') format('opentype');
+  font-weight: lighter;
+}
+@font-face {
+  font-family: 'iCielNovecentosans';
+  src: local('iCielNovecentosans'),
+    url('../../assets/fonts/iCielNovecentosans-Light.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'iCielNovecentosans';
+  src: local('iCielNovecentosans'),
+    url('../../assets/fonts/iCielNovecentosans-Medium.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'iCielNovecentosans';
+  src: local('iCielNovecentosans'),
+    url('../../assets/fonts/iCielNovecentosans-Normal.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'iCielNovecentosans';
+  src: local('iCielNovecentosans'),
+    url('../../assets/fonts/iCielNovecentosans-DemiBold.otf') format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'iCielNovecentosans';
+  src: local('iCielNovecentosans'),
+    url('../../assets/fonts/iCielNovecentosans-UltraBold.otf') format('opentype');
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: 'iCielCrocante';
+  src: local('iCielCrocante'), url('../../assets/fonts/iCielCrocante.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  // border-right: 1px solid #000;
+  // border-bottom: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background: #b2b2b22e;
+}
+
+.loading__panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #646464bf;
+  z-index: 1050;
+  .animation__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 265px;
+    height: 75px;
+    transform: translate(-50%, -50%) !important;
+
+    .loading__image {
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      width: 265px;
+      height: 75px;
+      // transform: translate(-50%, -50%) !important;
+      background-image: url('../../assets/images/ico__logo.svg');
+      background-size: cover;
+    }
+  }
+  .internet__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    transform: translate(-50%, -50%) !important;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .wifi__icon {
+      width: 200px;
+    }
+  }
+}
+
+.bubble {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: goup 8s linear infinite;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%, -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+  }
+
+  @keyframes goup {
+    0% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-200vh);
+      opacity: 0;
+    }
+  }
+}
+
+.html__container {
+  p {
+    max-width: 100%;
+    text-align: justify;
+  }
+}
+
+.fadeCustom-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.fadeCustom-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.fadeCustom-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.fadeCustom-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.fadeCustom-enter-active,
+.fadeCustom-exit-active {
+  transition: opacity 500ms, transform 500ms;
+}
+
+// no Drag image
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*
+  TESTING PAGE
+*/
+
+@keyframes opacityPoping {
+  0% {
+    box-shadow: 0 0 0 0 #04bc8a, 0 0 0 0 #b3ffea;
+  }
+  50% {
+    box-shadow: 0 0 0px 4px #04bc8a, 0 0 0px 12px #b3ffea;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #04bc8a, 0 0 0 0 #b3ffea;
+  }
+}
+
+.swal__warning--header {
+  margin-bottom: 1rem;
+  .swal2-title {
+    background: #fcb62f;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    text-align: justify;
+    color: #191818;
+  }
+}
+
+.custom_canvas {
+  transform: rotate(90deg);
+}
+
+.underline__letter {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #4f4f4f;
+}
+
+.custome_datepicker-wrapper {
+  width: 100%;
+  .custome_datepicker {
+    width: 100%;
+    background-color: #eeeeee !important;
+    border-color: #eeeeee !important;
+    border-radius: 6px !important;
+    border: none;
+    line-height: 2rem !important;
+    height: 2rem;
+    padding: 0 1rem;
+    &::placeholder {
+      color: #bdbdbd !important;
+    }
+    &.has__error {
+      border-color: red !important;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem #ff000021;
+      }
+    }
+    .react-datepicker__year-read-view,
+    .react-datepicker__month-read-view,
+    .react-datepicker__month-year-read-view {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.prev__button {
+  border: 1px solid black !important;
+  background-color: white !important;
+  color: black !important;
+  &:disabled {
+    border: 1px solid rgba(0, 0, 0, 0.568) !important;
+    background-color: white !important;
+    color: rgba(0, 0, 0, 0.568) !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div {
+  user-select: none;
+}
+
+.game__image--contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.swal2-confirm {
+  background: #0066ff !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px #0066ff;
+}
+
+.button__back {
+  position: absolute;
+}
+
+.game__result {
+  width: 450px;
+  height: 550px;
+}
+
+.game__name {
+  position: absolute;
+  background-image: url('../../assets/images/popup-result.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20%;
+  left: 10%;
+  width: 30em;
+  height: 38rem;
+  z-index: 1;
+
+  .game__title {
+    position: absolute;
+    top: 28%;
+    left: 21%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 52px;
+    text-transform: uppercase;
+    color: #ffffff;
+    @media screen and (max-width: 1300px) {
+      top: 26%;
+      left: 13%;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    top: 26%;
+    left: 13%;
+    width: 22em;
+    height: 30em;
+    top: 30%;
+  }
+
+  .result__wraper {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 1300px) {
+      top: 42%;
+      left: 22%;
+    }
+  }
+
+  .title,
+  .content {
+    display: inline-grid;
+
+    .btn-danger {
+      width: 200px;
+      height: 50px;
+      margin-bottom: 8px;
+      margin-right: 10px;
+
+      @media screen and (max-width: 1300px) {
+        width: 150px;
+        height: 44px;
+        padding: 0;
+      }
+    }
+
+    .btn-warning {
+      height: 50px;
+      margin-bottom: 8px;
+
+      @media screen and (max-width: 1300px) {
+        height: 44px;
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
+.content_has_tab {
+  padding: 0 10px;
+}
+
+.content_has_tab_margin {
+  margin: 2rem;
+}
+
+.title_size_text {
+  @media screen and (min-width: 1300px) {
+    font-size: 26px;
+  }
+}
+
+.say_hi {
+  font-size: 26px;
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+  }
+}
+
+.custommer_active {
+  display: flex;
+  align-items: 'center';
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+}
+
+.btn_active {
+  width: 100px;
+  @media screen and (max-width: 800px) {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+.title_overview {
+  margin: 20px 0px;
+}

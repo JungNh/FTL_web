@@ -1,0 +1,95 @@
+.audioplayer__component {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d1d6;
+  padding: 0.625rem;
+  border-radius: 99999px;
+  gap: 0.625rem;
+  audio {
+    display: none;
+  }
+  .component__button {
+    width: 1.8125rem;
+    height: 1.8125rem;
+    background: #0066ff;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .component__breaker {
+    height: 2.5rem;
+    width: 0.125rem;
+    background: #f5f5f5;
+  }
+  .component__progress {
+    flex: 1;
+    background: #e5e5ea;
+    border-radius: 6px;
+    height: 0.3125rem;
+    div {
+      height: 0.3125rem;
+      background: #0066ff;
+      border-radius: 6px;
+      //   width: 20%;
+    }
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    color: #000000 !important;
+  }
+}
+.custome__audio_player-blue {
+
+  border: 1px solid #d1d1d6;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  .rhap_container {
+    padding: 5px 15px;
+    .rhap_main-controls-button {
+      color: #0066ff;
+    }
+    .rhap_progress-filled {
+      background-color: #0066ff !important;
+    }
+    .rhap_current-time {
+      margin-left: 1rem;
+      padding-right: 10px;
+    }
+    .rhap_progress-indicator {
+      display: none;
+    }
+  }
+  .rhap_stacked .rhap_controls-section {
+    margin: 0;
+  }
+
+  .audioPlayer_custom {
+    padding-left: 0;
+    padding-right: 0;
+    .rhap_progress-section {
+      .rhap_progress-container {
+        margin: 0;
+        .rhap_progress-bar {
+          height: 0.5rem;
+          border-radius: 0.5rem;
+          .rhap_progress-indicator {
+            display: none;
+          }
+          .rhap_progress-filled {
+            background-color: #04bc8a;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+

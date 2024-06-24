@@ -1,0 +1,299 @@
+.lession__reading {
+  padding-top: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  @media screen and (max-width: 1300px) {
+    max-width: 60rem;
+  }
+
+  .title__lession {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0066ff;
+    text-transform: uppercase;
+  }
+
+  .header__result {
+    display: flex;
+    justify-content: space-between;
+  }
+  .result__report {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all ease;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 2.5rem;
+    &:hover {
+      // border-radius: 50%;
+      box-shadow: 0 0 4px 4px #a08800;
+      background-color: #ffd900;
+    }
+    .ico__flag {
+      width: 1.2rem;
+      height: 1.2rem;
+      object-fit: contain;
+      margin-right: 7px;
+    }
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .question__title {
+    color: #0066ff;
+    font-weight: bold;
+  }
+
+  .side__bar {
+    padding: 1rem;
+    border: 1px solid #e5e5ea;
+    // height: 55vh;
+
+    .side__bar--title {
+      color: #0066ff;
+      font-weight: bold;
+    }
+    .col-2 {
+      @media screen and (max-width: 1300px) {
+        padding: 0 0.5rem;
+      }
+    }
+
+    .side__bar--item {
+      width: 100%;
+      cursor: pointer;
+      background: #ffffff;
+      border: 0.6px solid #000000;
+      border-radius: 6px;
+      font-size: 1.25rem;
+      text-align: center;
+      @media screen and (max-width: 1300px) {
+        font-size: 1rem;
+      }
+      &.has-answer {
+        border-color: #04bc8a;
+        color: #04bc8a;
+      }
+      &.active {
+        background: #04bc8a;
+        border-color: #04bc8a;
+        color: white;
+      }
+
+      &.done {
+        &.active {
+          box-shadow: 0 0 4px 4px #a2ddec;
+        }
+        &.no-ans {
+          background: white;
+          border: 0.6px solid #000000;
+          color: #000000;
+        }
+        &.correct {
+          background: #04bc8a;
+          border-color: #04bc8a;
+          color: white;
+        }
+        &.error {
+          background: #ff3b30;
+          border-color: #ff3b30;
+          color: white;
+        }
+      }
+    }
+  }
+  .result__show {
+    padding: 1rem;
+    border: 1px solid #e5e5ea;
+    margin-bottom: 0.75rem;
+    .title__show {
+      color: #0066ff;
+      font-weight: bold;
+    }
+    .sub__green {
+      color: #04bc8a;
+    }
+    .sub__red {
+      color: #ff3b30;
+    }
+  }
+
+  .question__section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-bottom: 100px !important;
+
+    .richtext__container {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .explain__result {
+      border-top: 1px solid #e5e5ea;
+      padding: 1rem;
+      .title__exp {
+        font-size: 20px;
+        // font-size: 1rem;
+        font-weight: bold;
+      }
+      .correct_exp {
+        color: #04bc8a;
+        span {
+          font-weight: bold;
+        }
+      }
+      .wrong_exp {
+        color: #ff3b30;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .custome__audio_player-blue {
+      border: 1px solid #d1d1d6;
+      border-radius: 30px;
+      overflow: hidden;
+      .rhap_container {
+        padding: 5px 15px;
+        .rhap_main-controls-button {
+          color: #0066ff;
+        }
+        .rhap_progress-filled {
+          background-color: #0066ff !important;
+        }
+        .rhap_current-time {
+          margin-left: 1rem;
+          padding-right: 10px;
+
+        }
+        .rhap_progress-indicator {
+          display: none;
+        }
+      }
+      .rhap_stacked .rhap_controls-section {
+        margin: 0;
+      }
+    }
+    .button__direct {
+      position: fixed;
+      width: 65vw;
+      right: 0;
+      bottom: 0;
+      background-color: #ffffffe3;
+    }
+  }
+}
+
+.sumary__results {
+  .title__lession {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0066ff;
+    text-transform: uppercase;
+  }
+
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 1rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .summary__left {
+    padding: 0 2rem;
+    .summary__left-title {
+      font-size: 2rem;
+      text-align: center;
+      color: #0066ff;
+      font-weight: bold;
+    }
+
+    .circlePercent {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+
+  .summary__right {
+    padding: 0 2rem;
+    border-left: 1px solid #c2c2c2;
+    height: calc(100vh - 16rem);
+    overflow: auto;
+
+    .summary__right-title {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .rank__th {
+      text-align: center;
+      border-top: 1px solid #c2c2c2;
+      border-bottom: 1px solid #c2c2c2;
+    }
+
+    .rank__td {
+      border: none;
+      .avatar__td {
+        width: 1.6rem;
+        height: 1.6rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .rank-0,
+      .rank-1,
+      .rank-2 {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        padding-top: 2px;
+        &.rank-0 {
+          background-color: #ff3b30;
+        }
+        &.rank-1 {
+          background-color: #ff7a00;
+        }
+        &.rank-2 {
+          background-color: #ffcc00;
+        }
+      }
+    }
+  }
+}
+
+.small_speaker {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: 1s all ease;
+  box-shadow: 0 0 0 0 #04bc8a, 0 0 0 0 #b3ffea;
+
+  &.playing {
+    animation: opacityPoping infinite 1s ease;
+  }
+}

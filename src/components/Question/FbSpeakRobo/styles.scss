@@ -1,0 +1,42 @@
+.feed__back__robo {
+  .fubo__image {
+    margin-right: 1rem;
+  }
+  .dot_animate--wrapper {
+    margin-left: 8px;
+    width: 14px;
+    display: inline-block;
+    .dot_animate {
+      animation: 1s linear infinite running dotRun;
+      overflow: hidden;
+      display: inline-block;
+      @keyframes dotRun {
+        0% {
+          width: 0px;
+        }
+        50% {
+          width: 7px;
+        }
+        100% {
+          width: 14px;
+        }
+      }
+    }
+  }
+  .record_wrapper {
+    position: relative;
+    background: #0066ff;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 0px #0056d6, 0px 3px 3px rgba(0, 0, 0, 0.5);
+    width: 2rem;
+    height: 2rem;
+    .icon_record {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+}

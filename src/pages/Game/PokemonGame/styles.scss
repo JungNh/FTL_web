@@ -1,0 +1,801 @@
+.pokemon__game {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+  .btn__time {
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn__time {
+    left: 9rem;
+  }
+
+  .showTimer {
+    left: 320px !important;
+  }
+
+  .label_time {
+    position: absolute;
+    top: 3rem;
+    left: 15rem;
+    font-family: 'Mali';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 69px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .game__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .game-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .game-answer {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+  }
+  .container-game {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    .game-button {
+      cursor: pointer;
+      transition: all ease 0.1s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        transform: translateY(3px) !important;
+      }
+    }
+
+    .header-game {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      display: flex;
+      align-items: center;
+    }
+    .font-text {
+      font-family: 'Mali', cursive;
+      font-size: 5rem;
+      color: white;
+      line-height: 75.4px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-left: 2.5rem;
+      user-select: none;
+      margin-bottom: 1rem;
+      -webkit-text-stroke: 2px red;
+    }
+  }
+
+  .back-button {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  .heart_ico {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    display: flex;
+  }
+
+  .start-button-pokemon {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: translate(-30%, -20%);
+    .btn__play--text {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      z-index: 1;
+    }
+  }
+
+  .animation-start {
+    animation: shake 2.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .game-fubomon-logo {
+    position: absolute;
+    width: 30%;
+    bottom: 10%;
+    left: 10%;
+    transform: translate(-10%, 5%);
+    img {
+      object-fit: contain;
+      max-height: 50vh;
+    }
+  }
+  .game-fubomon-pokeball {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 40vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .game-ball {
+    align-self: center;
+    justify-self: center;
+  }
+  .game-ball-1 {
+    animation: 0.9s shake infinite;
+  }
+  .game-ball-2 {
+    animation: 2s shake infinite;
+  }
+  .game-ball-3 {
+    animation: 1.7s shake infinite;
+  }
+  .game-ball-4 {
+    animation: 1.6s shake infinite;
+  }
+  .game-ball-5 {
+    animation: 4s shake infinite;
+  }
+  .game-ball-6 {
+    animation: 0.7s shake infinite;
+  }
+  .game-ball-7 {
+    animation: 8s shake infinite;
+  }
+  .game-ball-8 {
+    animation: 6s shake infinite;
+  }
+  .game-ball-9 {
+    animation: 2.7s shake infinite;
+  }
+
+  .animation-logo {
+    width: 100%;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  .chat-game {
+    position: absolute;
+    top: 70%;
+    margin-left: 50px;
+  }
+  .container-chat-game {
+    width: 100%;
+  }
+  .chat-text-game {
+    position: absolute;
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  .left-chat-game {
+    position: relative;
+    width: 400px;
+  }
+  .sound-game-pokemon {
+    position: absolute;
+    top: 80%;
+    right: 50px;
+  }
+
+  .correct-answer {
+    margin-left: 50px;
+    margin-top: -100px;
+  }
+
+  .incorrect-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000065;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    font-size: 40px;
+    color: white;
+  }
+  .icon-incorrect-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .answer-animation {
+    transition: all 0.2s ease-in-out;
+  }
+  .answer-animation:hover {
+    transform: scale(1.2);
+  }
+
+  .container-correct-game-pokemon {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 525px;
+    @media screen and (max-width: 1300px) {
+      width: 400px;
+    }
+    .result-game {
+      position: relative;
+      width: 100%;
+
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 24px;
+        color: white;
+        top: 13%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .result-image-game {
+        position: absolute;
+        width: 80%;
+        height: 60%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        // width: 200px;
+        // height: 200px;
+        object-fit: contain;
+      }
+    }
+  }
+  .result-game-answer {
+    position: absolute;
+    top: calc(50% + 250px);
+    left: 35%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: fit-content;
+    @media screen and (max-width: 1300px) {
+      width: 500px;
+      top: calc(50% + 200px);
+    }
+    .result-game-answer-box {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: 100% 100%;
+      padding: 1rem 0;
+      position: relative;
+      .text_backround--image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .result-game-answer-text {
+      z-index: 10;
+      font-family: 'Mali', cursive;
+      font-size: 30px;
+      color: white;
+      width: 90%;
+      overflow: hidden;
+      padding: 0 1rem;
+      text-align: center;
+    }
+  }
+  .sound-result-game {
+    position: absolute;
+    top: calc(50% + 150px);
+    left: calc(35% - 400px);
+    @media screen and (max-width: 1300px) {
+      top: calc(50% + 100px);
+      left: calc(35% - 300px);
+    }
+  }
+  .container-point-game-pokemon {
+    position: absolute;
+    bottom: 45%;
+    right: 30%;
+    transform: translate(50%, 50%);
+    @media screen and (max-width: 1300px) {
+      right: 25%;
+    }
+    .result-game {
+      position: relative;
+      width: 400px;
+      .container-result-game {
+        width: 100%;
+      }
+      .result-text-game {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 50px;
+        color: white;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+    .continue-game {
+      position: relative;
+      width: 170px;
+      margin: auto;
+      margin-top: 20px;
+      .result-game {
+        width: 100%;
+      }
+      .btn__continue--text {
+        position: absolute;
+        bottom: 0%;
+        z-index: 1;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      .continue-game {
+        width: 100%;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .continue-game-pokemon {
+    position: absolute;
+    width: 200px;
+    right: 5%;
+    bottom: 5%;
+    .btn__continue--text {
+      position: absolute;
+      bottom: 2%;
+      z-index: 1;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+    .contiue-game-btn {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .pokeball-text {
+    position: absolute;
+    right: 15%;
+    top: 40%;
+    font-family: 'Mali', cursive;
+    font-size: 100px;
+    color: white;
+  }
+
+  .summary-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 80px;
+  }
+  .pokeball-animation {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 30%;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .pokeball-result {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 35%;
+    @media screen and (max-width: 1300px) {
+      left: 7% !important;
+    }
+    .pokeball-result-box {
+      width: 100%;
+    }
+    .pokemon-result {
+      position: absolute;
+      top: 25%;
+      left: 45%;
+      width: 50%;
+    }
+  }
+
+  .robot__blur {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+  }
+
+  .table-summary-pokemon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15%;
+    width: 100%;
+    padding: 2rem 4rem;
+    justify-content: center;
+  }
+  .box-summary-pokemon {
+    width: 20%;
+    position: relative;
+  }
+  .box-finish-summary {
+    position: relative;
+    margin: 0 1rem;
+    display: flex;
+    align-items: flex-end;
+    .box__wrong {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      z-index: 1;
+    }
+  }
+  .text-box-summary {
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    color: white;
+    width: 200px;
+    text-align: center;
+    .image-box-summary {
+      margin-top: 10px;
+    }
+  }
+
+  .again-game-pokemon {
+    position: absolute;
+    // top: 40%;
+    bottom: 15%;
+    right: 15%;
+    width: 170px;
+    margin: auto;
+    margin-top: 20px;
+    .result-game {
+      width: 100%;
+    }
+    .btn__continue--text {
+      position: absolute;
+      bottom: 2%;
+      z-index: 1;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+    .continue-game {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+  .container-again {
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    .again-container-text {
+      position: relative;
+
+      width: 450px;
+      margin: auto;
+      margin-top: 20px;
+      .again-text {
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 30px;
+        color: white;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+  .game-score-container {
+    position: absolute;
+    bottom: 0%;
+    left: 21%;
+    width: 500px;
+    height: 82%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1300px) {
+      width: 400px;
+    }
+    .container__instruction {
+      margin-bottom: 16px;
+      width: 100%;
+      .container__instruction--text {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        img {
+          height: 150px;
+          @media screen and (max-width: 1300px) {
+            height: 120px;
+            object-fit: fill;
+          }
+        }
+        .instruction__text {
+          position: absolute;
+          margin: auto;
+          font-family: 'Mali', cursive;
+          font-size: 40px;
+          width: 100%;
+          color: white;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%);
+          padding: 10px 20px;
+          @media screen and (max-width: 1300px) {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .logo__animation-gameplay {
+      position: relative;
+      width: 80%;
+    }
+    .game-score-box {
+      width: 100%;
+      -webkit-user-drag: none;
+      @media screen and (max-width: 1300px) {
+        width: 340px;
+      }
+    }
+    .game-score-text {
+      font-family: 'Mali', cursive;
+      font-size: 60px;
+      color: white;
+      line-height: 70px;
+      text-transform: uppercase;
+      position: absolute;
+      text-align: center;
+      bottom: 10%;
+      width: 100%;
+      @media screen and (max-width: 1300px) {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .game-question-container {
+    position: absolute;
+    top: 57%;
+    right: 30%;
+    width: 900px;
+    transform: translate(50%, -50%);
+    @media screen and (max-width: 1300px) {
+      width: 700px;
+    }
+    .game-question-relative {
+      position: relative;
+      text-align: center;
+      .game-question-box-pokemon {
+        position: absolute;
+        width: 8%;
+        left: 47%;
+        top: 43%;
+      }
+      .game-question-box {
+        width: 100%;
+      }
+      .game-question-button {
+        margin-top: 10px;
+      }
+      .game-question-text {
+        display: flex;
+        z-index: 10;
+        position: absolute;
+        font-family: 'Mali', cursive;
+        font-size: 24px;
+        color: white;
+        // text-transform: uppercase;
+        top: 10px;
+        width: 80%;
+        left: 10%;
+        height: 14%;
+        justify-content: center;
+        align-items: center;
+      }
+      .game-question-answer {
+        width: 40%;
+        height: 26%;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+        .answers_bg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+        .game-question-answer-text {
+          display: flex;
+          font-family: cursive;
+          font-size: 24px;
+          color: white;
+          line-height: 70px;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .answer-0 {
+        top: 20%;
+        left: 7%;
+        position: absolute;
+      }
+      .answer-1 {
+        top: 20%;
+        right: 5%;
+        position: absolute;
+      }
+      .answer-2 {
+        top: 50%;
+        left: 7%;
+        position: absolute;
+      }
+      .answer-3 {
+        top: 50%;
+        right: 5%;
+        position: absolute;
+      }
+    }
+  }
+
+  .user-drag--none {
+    -webkit-user-drag: none;
+  }
+  .user-select--none {
+    user-select: none;
+  }
+  .game__score--wrapper {
+    position: absolute;
+    top: 70%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    .game__score--relative {
+      position: relative;
+      .game-score-text {
+        font-family: 'Mali', cursive;
+        font-size: 50px;
+        color: white;
+        line-height: 70px;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        bottom: 8%;
+        width: 100%;
+        @media screen and (max-width: 1300px) {
+          font-size: 40px;
+          bottom: 10%;
+          line-height: 40px;
+        }
+      }
+      .game-score-box {
+        width: 100%;
+      }
+    }
+  }
+
+  .img-result {
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    width: 500px;
+    height: 360px;
+    margin: auto;
+  }
+}

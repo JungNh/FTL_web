@@ -1,0 +1,16 @@
+.noCourses__page--detail {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  .button__back {
+    display: flex;
+    position: fixed;
+    left: 2.5rem;
+    top: 4rem;
+    background: #eeeeee;
+    border-radius: 12px;
+    z-index: 1000;
+    width: 4rem;
+    height: 4rem;
+  }
+}

@@ -1,0 +1,39 @@
+.navbar__components {
+  z-index: 88;
+  position: fixed;
+  bottom: 0;
+  width: 95vw;
+  left: 2.5vw;
+  background: #282830;
+  border-radius: 0.75rem 0.75rem 0px 0px;
+  height: 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .navbar__btn {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    margin: 0 0.75rem;
+    font-weight: bold;
+    transform: translateY(-50%);
+    background: #e0e0e0;
+    border-color: #e0e0e0;
+    border-radius: 12px;
+    color: #282830;
+    padding: 0;
+    &:hover,
+    &:focus,
+    &:active {
+      background: #eeeeee;
+      color: #282830;
+    }
+
+    &.active {
+      background-color: #0062cc;
+      border-color: #005cbf;
+      color: white;
+    }
+  }
+}
